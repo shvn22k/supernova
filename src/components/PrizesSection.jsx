@@ -1,27 +1,16 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaTrophy, FaMedal, FaAward, FaStar } from 'react-icons/fa';
-import { useEffect, useState, useRef } from 'react';
+import { useState } from 'react';
 
 const PrizesSection = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const sectionRef = useRef(null);
+  const [revealedPrizes, setRevealedPrizes] = useState({});
   
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (sectionRef.current) {
-        const rect = sectionRef.current.getBoundingClientRect();
-        setMousePosition({
-          x: e.clientX - rect.left,
-          y: e.clientY - rect.top
-        });
-      }
-    };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+  const handleReveal = (index) => {
+    setRevealedPrizes(prev => ({
+      ...prev,
+      [index]: true
+    }));
+  };
 
   const prizes = [
     {
@@ -29,29 +18,26 @@ const PrizesSection = () => {
       icon: <FaTrophy />,
       prize: '₹!!!!!',
       description: 'We will keep you guessing that for now :)',
-      color: '#FFD700',
-      particleCount: 8
+      color: '#FFD700'
     },
     {
       place: '2nd Place',
       icon: <FaMedal />,
       prize: '₹!!!!!',
       description: 'We will keep you guessing that for now :)',
-      color: '#C0C0C0',
-      particleCount: 6
+      color: '#C0C0C0'
     },
     {
       place: '3rd Place',
       icon: <FaAward />,
       prize: '₹!!!!!',
       description: 'We will keep you guessing that for now :)',
-      color: '#CD7F32',
-      particleCount: 4
+      color: '#CD7F32'
     }
   ];
 
   return (
-    <section className="prizes-section" id="prizes" ref={sectionRef}>
+    <section className="prizes-section" id="prizes">
       <div className="section-container">
         <motion.h2 
           className="section-title"
@@ -66,7 +52,7 @@ const PrizesSection = () => {
           {prizes.map((prize, index) => (
             <motion.div
               key={prize.place}
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0.9, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ 
                 duration: 0.7, 
@@ -74,145 +60,149 @@ const PrizesSection = () => {
                 type: "spring",
                 stiffness: 100
               }}
-              whileHover={{ 
-                scale: 1.05,
-                rotate: [0, 1, 0, -1, 0],
-                transition: { duration: 0.3 }
-              }}
-              className="prize-card glass-effect cosmic-prize"
+              className={`prize-card glass-effect prize-card-reveal ${revealedPrizes[index] ? 'prize-revealed' : ''}`}
             >
-              {/* Orbiting particles */}
-              {[...Array(prize.particleCount)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="prize-particle"
-                  initial={{ 
-                    x: 0, 
-                    y: 0, 
-                    opacity: 0.7,
-                    backgroundColor: prize.color
-                  }}
-                  animate={{
-                    x: [0, 30, 0, -30, 0],
-                    y: [0, -30, 0, 30, 0],
-                    opacity: [0.4, 0.8, 0.6, 0.9, 0.4],
-                    scale: [1, 1.2, 1, 0.8, 1]
-                  }}
-                  transition={{
-                    duration: 5 + i * 0.5,
-                    repeat: Infinity,
-                    delay: i * 0.3,
-                    ease: "easeInOut"
-                  }}
-                  style={{
-                    position: 'absolute',
-                    width: `${6 + i * 2}px`,
-                    height: `${6 + i * 2}px`,
-                    borderRadius: '50%',
-                    filter: `blur(2px) brightness(1.2)`
-                  }}
-                />
-              ))}
-              
-              <motion.div 
-                className="prize-glow"
-                animate={{
-                  boxShadow: [
-                    `0 0 20px 0px ${prize.color}40`,
-                    `0 0 30px 5px ${prize.color}80`,
-                    `0 0 25px 2px ${prize.color}60`,
-                    `0 0 30px 5px ${prize.color}80`,
-                    `0 0 20px 0px ${prize.color}40`
-                  ]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-              
-              <motion.div 
-                className="prize-icon"
-                style={{ color: prize.color }}
-                animate={{
-                  filter: [
-                    `drop-shadow(0 0 8px ${prize.color}60)`,
-                    `drop-shadow(0 0 15px ${prize.color}90)`,
-                    `drop-shadow(0 0 12px ${prize.color}70)`,
-                    `drop-shadow(0 0 15px ${prize.color}90)`,
-                    `drop-shadow(0 0 8px ${prize.color}60)`
-                  ],
-                  scale: [1, 1.05, 1, 0.98, 1]
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                {prize.icon}
-              </motion.div>
-              
-              <h3 className="prize-place">{prize.place}</h3>
-              
-              <motion.div 
-                className="prize-amount"
-                animate={{
-                  textShadow: [
-                    `0 0 8px ${prize.color}60`,
-                    `0 0 15px ${prize.color}90`,
-                    `0 0 12px ${prize.color}70`,
-                    `0 0 15px ${prize.color}90`,
-                    `0 0 8px ${prize.color}60`
-                  ]
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                {prize.prize}
-              </motion.div>
-              
-              <p className="prize-description">{prize.description}</p>
-              
-              <motion.div 
-                className="prize-stars-container"
-                animate={{
-                  rotate: 360
-                }}
-                transition={{
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              >
-                {[...Array(3)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="prize-star"
-                    initial={{ opacity: 0.7 }}
-                    animate={{
-                      opacity: [0.4, 0.9, 0.4],
-                      scale: [0.8, 1.2, 0.8]
+              {/* Blurred content before reveal */}
+              {!revealedPrizes[index] && (
+                <motion.div 
+                  className="prize-blur-overlay"
+                  initial={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <h3 className="prize-place">{prize.place}</h3>
+                  <motion.button
+                    className="prize-reveal-btn"
+                    onClick={() => handleReveal(index)}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: `0 0 20px ${prize.color}`
                     }}
-                    transition={{
-                      duration: 2 + i,
-                      repeat: Infinity,
-                      delay: i * 0.5
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Reveal Prize
+                  </motion.button>
+                </motion.div>
+              )}
+              
+              {/* Star burst animation on reveal */}
+              <AnimatePresence>
+                {revealedPrizes[index] && (
+                  <motion.div 
+                    className="starburst-container"
+                    initial={{ scale: 0 }}
+                    animate={{ 
+                      scale: [0, 1.5, 1], 
+                      opacity: [1, 0.8, 0] 
                     }}
-                    style={{
-                      position: 'absolute',
-                      color: prize.color,
-                      transform: `rotate(${i * 120}deg) translateX(60px)`
+                    transition={{ 
+                      duration: 0.7,
+                      times: [0, 0.6, 1]
                     }}
                   >
-                    <FaStar />
+                    {[...Array(12)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        className="starburst-ray"
+                        initial={{ opacity: 0 }}
+                        animate={{ 
+                          opacity: [0, 1, 0],
+                          scale: [0.3, 1.2, 0.8] 
+                        }}
+                        transition={{ 
+                          duration: 0.5,
+                          delay: i * 0.02
+                        }}
+                        style={{ 
+                          transform: `rotate(${i * 30}deg)`,
+                          background: `linear-gradient(to right, transparent, ${prize.color}, transparent)`
+                        }}
+                      />
+                    ))}
                   </motion.div>
-                ))}
-              </motion.div>
+                )}
+              </AnimatePresence>
+              
+              {/* Prize content (revealed or blurred) */}
+              <AnimatePresence>
+                {revealedPrizes[index] && (
+                  <motion.div 
+                    className="prize-content"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    <motion.div 
+                      className="prize-icon"
+                      style={{ color: prize.color }}
+                      animate={{
+                        scale: [0.9, 1.1, 1],
+                        filter: `drop-shadow(0 0 10px ${prize.color})`
+                      }}
+                      transition={{
+                        duration: 0.6,
+                        ease: "easeOut"
+                      }}
+                    >
+                      {prize.icon}
+                    </motion.div>
+                    
+                    <h3 className="prize-place">{prize.place}</h3>
+                    
+                    <motion.div 
+                      className="prize-amount"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3, duration: 0.5 }}
+                      style={{ color: prize.color }}
+                    >
+                      {prize.prize}
+                    </motion.div>
+                    
+                    <motion.p 
+                      className="prize-description"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.4, duration: 0.5 }}
+                    >
+                      {prize.description}
+                    </motion.p>
+                    
+                    <motion.div 
+                      className="prize-sparkles"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.5, duration: 0.5 }}
+                    >
+                      {[...Array(3)].map((_, i) => (
+                        <motion.div
+                          key={i}
+                          className="prize-sparkle"
+                          animate={{
+                            opacity: [0.3, 0.8, 0.3],
+                            scale: [0.8, 1.2, 0.8],
+                            x: [0, i % 2 === 0 ? 5 : -5, 0],
+                            y: [0, i % 3 === 0 ? -5 : 5, 0]
+                          }}
+                          transition={{
+                            duration: 2 + i,
+                            repeat: Infinity,
+                            delay: i * 0.5
+                          }}
+                          style={{
+                            position: 'absolute',
+                            color: prize.color,
+                            right: `${10 + i * 15}px`,
+                            top: `${10 + i * 20}px`,
+                            fontSize: `${0.5 + i * 0.2}rem`
+                          }}
+                        >
+                          <FaStar />
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>

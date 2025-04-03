@@ -1400,6 +1400,95 @@ body {
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
+  min-height: 350px;
+}
+
+.prize-card-reveal {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prize-blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  z-index: 10;
+}
+
+.prize-reveal-btn {
+  padding: 0.875rem 1.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.prize-reveal-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.starburst-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.starburst-ray {
+  position: absolute;
+  height: 4px;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+  transform-origin: left center;
+}
+
+.prize-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  z-index: 1;
+}
+
+.prize-sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.prize-revealed {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
 .cosmic-prize {
@@ -1493,17 +1582,6 @@ body {
   }
   75% {
     transform: translateY(15px) translateX(15px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
   }
 }
 
@@ -2349,20 +2427,27 @@ body {
 
 @media (max-width: 768px) {
   .roadmap-item, .roadmap-item:nth-child(even) {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
+    gap: 1.5rem;
+  }
+  
+  .roadmap-item:nth-child(even) {
+    flex-direction: row-reverse;
   }
   
   .roadmap-bubble, .roadmap-item:nth-child(even) .roadmap-bubble {
-    margin: 0 0 2rem 0;
-    width: 160px;
-    height: 160px;
+    margin: 0;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
   }
   
   .roadmap-content, .roadmap-item:nth-child(even) .roadmap-content {
     flex-direction: row;
     width: 100%;
+    padding: 1.25rem;
   }
   
   .roadmap-connector {
@@ -2371,43 +2456,51 @@ body {
   
   .roadmap-content::before, .roadmap-item:nth-child(even) .roadmap-content::before {
     left: 0;
-    width: 100%;
-    height: 4px;
+    width: 4px;
+    height: 100%;
     top: 0;
-    background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.3));
+    background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.3));
+  }
+  
+  .roadmap-item:nth-child(even) .roadmap-content::before {
+    left: auto;
+    right: 0;
   }
 }
 
 @media (max-width: 480px) {
   .roadmap-bubble {
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
   }
   
   .roadmap-time {
-    font-size: 1rem;
-    padding: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.25rem;
   }
   
   .roadmap-content {
-    padding: 1.25rem;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
+    padding: 1rem;
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: center;
   }
   
   .roadmap-item:nth-child(even) .roadmap-content {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row-reverse;
   }
   
   .roadmap-title {
-    font-size: 1.125rem;
+    font-size: 1rem;
+  }
+  
+  .roadmap-description {
+    font-size: 0.875rem;
   }
   
   .roadmap-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
   }
 }
