@@ -1,0 +1,91 @@
+/* Theme overrides for strictly black and white */
+
+/* Countdown item */
+.countdown-item {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Event info styles */
+.event-info-container {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.event-info-icon-wrapper {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Tech icon container */
+.tech-icon-container {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* About highlight */
+.about-highlight {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Feature card */
+.feature-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Cursor effects */
+.cursor-glow {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  ) !important;
+}
+
+/* Glass effect override */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Navbar override */
+.navbar {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Timeline content override */
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* About container override */
+.about-container {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Hover effects */
+.glass-effect:hover,
+.feature-card:hover,
+.timeline-content:hover,
+.tech-icon-container:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.08) !important;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
