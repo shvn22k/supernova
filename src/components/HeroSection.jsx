@@ -10,33 +10,26 @@ const HeroSection = () => {
     seconds: 0
   });
   
-  const [text, setText] = useState("H");
-  const taglineText = "Hack the Void, Own the Stars..";
-  const taglineIndex = useRef(0);
-  const [animationComplete, setAnimationComplete] = useState(false);
+  const [displayText, setDisplayText] = useState("");
+  const fullText = "Hack the Void, Own the Stars";
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [orbitRotation, setOrbitRotation] = useState(0);
-
-  // Reset typewriter effect when component mounts
-  useEffect(() => {
-    // Reset typewriter on component mount
-    setText("H");
-    taglineIndex.current = 0;
-    setAnimationComplete(false);
-  }, []);
 
   // Typewriter effect
   useEffect(() => {
-    if (taglineIndex.current < taglineText.length) {
-      const timeout = setTimeout(() => {
-        setText(prev => prev + taglineText[taglineIndex.current]);
-        taglineIndex.current += 1;
-      }, 100);
-      
-      return () => clearTimeout(timeout);
-    } else {
-      setAnimationComplete(true);
-    }
-  }, [text]);
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex < fullText.length) {
+        setDisplayText(fullText.substring(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+        setIsTypingComplete(true);
+      }
+    }, 100);
+
+    return () => clearInterval(typingInterval);
+  }, []);
   
   // Orbit animation
   useEffect(() => {
@@ -91,8 +84,8 @@ const HeroSection = () => {
               <span className="nova-text">NOVA</span>
             </h1>
             <div className="hero-tagline">
-              {text}
-              {!animationComplete && <span className="cursor-blink"></span>}
+              {displayText}
+              {!isTypingComplete && <span className="cursor-blink"></span>}
             </div>
             
             <a href="https://devfolio.co" target="_blank" rel="noopener noreferrer">

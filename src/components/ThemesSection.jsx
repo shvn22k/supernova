@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaRobot, FaCubes, FaHeartbeat, FaMicrochip, FaLeaf, FaLightbulb, FaVrCardboard, FaShieldAlt, FaGraduationCap } from 'react-icons/fa';
+import { FaRobot, FaCubes, FaMicrochip, FaVrCardboard } from 'react-icons/fa';
 
 const ThemesSection = () => {
   const themes = [
@@ -10,28 +10,8 @@ const ThemesSection = () => {
     },
     {
       icon: <FaCubes />,
-      title: 'Blockchain',
+      title: 'Web3/Blockchain',
       description: 'Build decentralized applications and explore the future of web3 technology.'
-    },
-    {
-      icon: <FaHeartbeat />,
-      title: 'Healthcare',
-      description: 'Develop solutions to improve healthcare delivery and patient outcomes.'
-    },
-    {
-      icon: <FaMicrochip />,
-      title: 'IoT/Hardware Solutions',
-      description: 'Create smart devices and connected solutions for the future.'
-    },
-    {
-      icon: <FaLeaf />,
-      title: 'Sustainability',
-      description: 'Design eco-friendly solutions to address environmental challenges.'
-    },
-    {
-      icon: <FaLightbulb />,
-      title: 'Open Innovation',
-      description: 'Think outside the box and bring your unique ideas to life.'
     },
     {
       icon: <FaVrCardboard />,
@@ -39,14 +19,9 @@ const ThemesSection = () => {
       description: 'Create immersive augmented and virtual reality experiences that transform how we interact with digital content.'
     },
     {
-      icon: <FaShieldAlt />,
-      title: 'Cybersecurity',
-      description: 'Develop solutions to protect data, systems, and networks from digital attacks and security threats.'
-    },
-    {
-      icon: <FaGraduationCap />,
-      title: 'EdTech',
-      description: 'Revolutionize learning through technology with innovative educational tools and platforms.'
+      icon: <FaMicrochip />,
+      title: 'IoT',
+      description: 'Create smart devices and connected solutions for the future.'
     }
   ];
 
