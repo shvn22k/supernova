@@ -29,73 +29,97 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
 }
 
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Header Layout */
 .header-content {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+}
+
+/* Desktop Header Layout */
+.desktop-header-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem; /* Increased gap for better spacing */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .logo {
-  height: 60px;
+  height: 50px;
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  transition: transform 0.2s ease;
 }
 
-.logo-left {
-  margin-right: 1rem;
+.college-logo {
+  height: 48px;
 }
 
-.logo-right {
-  margin-left: 1rem;
+.hackathon-logo {
+  height: 52px;
 }
 
-/* Navbar Styles */
+/* Navbar Styles for desktop */
+.navbar-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  max-width: 1100px; /* Increased max-width */
+  margin: 0 auto;
+}
+
 .navbar {
-  width: 100%;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 2rem;
+  padding: 0.875rem 2rem;
   transition: all 0.3s ease;
   border-radius: 50px;
   margin: 0 auto;
-  max-width: 95%;
-}
-
-.navbar.scrolled {
-  background: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make navbar take full available width */
+  max-width: 100%;
 }
 
 .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
 }
 
-.navbar-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.desktop-menu {
+.navbar-links {
   display: flex;
-  gap: 4rem;
+  gap: 2.5rem;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .navbar-link {
@@ -137,105 +161,174 @@ body {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Mobile Menu Styles */
 .mobile-menu-btn {
-  display: none;
+  display: block;
   background: none;
   border: none;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   cursor: pointer;
   padding: 0.5rem;
+  z-index: 1001;
 }
 
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 0.5rem);
+.desktop-only {
+  display: flex;
+}
+
+.mobile-menu-fullscreen {
+  position: fixed;
+  top: 72px; /* Match the header height */
   left: 0;
   right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
-  padding: 1rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 6rem;
+  z-index: 99;
+  overflow-y: auto;
+  height: calc(100vh - 72px); /* Ensure full height minus header */
 }
 
 .mobile-menu-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: 1rem 1.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.125rem;
-  padding: 1rem;
-  text-align: center;
-  transition: all 0.3s ease;
 }
 
-.mobile-menu-link:hover {
-  background: rgba(255, 255, 255, 0.1);
+.mobile-menu-link:active {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.register-btn.mobile {
-  width: 100%;
-  margin-top: 1rem;
-}
-
+/* Responsive Styles */
 @media (max-width: 1200px) {
-  .header {
-    padding: 1rem;
+  .navbar-links {
+    gap: 1.5rem;
   }
+  
+  .navbar-link {
+    font-size: 0.95rem;
+  }
+  
+  .desktop-header-content {
+    gap: 1.5rem;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .college-logo {
+    height: 45px;
+  }
+  
+  .hackathon-logo {
+    height: 48px;
+  }
+}
 
+@media (max-width: 992px) {
+  .navbar-wrapper {
+    padding: 0 1rem;
+  }
+  
   .navbar {
-    min-width: auto;
-    width: auto;
-    max-width: 95%;
-    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .navbar-links {
+    gap: 1.5rem;
+  }
+  
+  .navbar-link {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 768px) {
-  .header {
-    padding: 0.75rem;
+  .header-content {
+    padding: 0.75rem 1.5rem;
   }
   
   .logo {
     height: 40px;
   }
   
-  .navbar {
-    padding: 0.5rem 1rem;
-    border-radius: 30px;
-    max-width: 95%;
-  }
-
-  .desktop-menu {
-    display: none;
-  }
-
-  .mobile-menu-btn {
-    display: block;
-  }
-
-  .mobile-menu {
-    display: block;
-    position: absolute;
-    top: calc(100% + 0.5rem);
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  .college-logo {
+    height: 35px;
   }
 }
 
-/* Content wrapper */
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo {
+    height: 35px;
+  }
+  
+  .college-logo {
+    height: 30px;
+  }
+  
+  .logo-container {
+    gap: 1rem;
+  }
+  
+  .mobile-menu-link {
+    font-size: 1.125rem;
+    padding: 0.875rem 1.25rem;
+  }
+}
+
+/* Media queries for mobile adjustments */
+@media (max-width: 768px) {
+  .mobile-menu-fullscreen {
+    height: calc(100vh - 70px);
+    padding-bottom: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-menu-fullscreen {
+    height: calc(100vh - 65px);
+    padding-bottom: 8rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .mobile-menu-fullscreen {
+    height: calc(100vh - 65px);
+    padding-bottom: 9rem;
+    padding-top: 1rem;
+  }
+  
+  .mobile-menu-link {
+    padding: 0.75rem 1rem;
+    margin: 0.25rem 0;
+    font-size: 1rem;
+  }
+}
+
+/* Content wrapper - adjust top padding for different layouts */
 .content-wrapper {
   position: relative;
   z-index: 10;
-  padding-top: 160px; /* Increased space for fixed header and navbar */
+  padding-top: 100px; /* Base padding */
 }
 
 /* Glass effect */
@@ -283,8 +376,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
+/* Title container and orbit styling */
 .title-container {
   position: relative;
   margin-bottom: 3rem;
@@ -299,12 +394,13 @@ body {
 /* Title decoration with larger orbit */
 .title-decoration {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
   width: 100%;
-  height: 100%;
+  max-width: 650px;
+  height: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -317,6 +413,7 @@ body {
   border-radius: 50%;
   position: relative;
   transition: transform 0.05s linear;
+  margin-top: 100px;
 }
 
 .planet {
@@ -334,7 +431,6 @@ body {
 .main-title {
   font-size: 12rem;
   font-weight: 800;
-  margin-bottom: 2rem;
   position: relative;
   z-index: 2;
   width: 100%;
@@ -342,6 +438,8 @@ body {
   display: flex;
   justify-content: center;
   line-height: 1;
+  white-space: nowrap;
+  margin-top: 170px; /* Adjusted from 50px to 70px to center with lowered orbit */
 }
 
 .super-text {
@@ -368,13 +466,13 @@ body {
 .hero-tagline {
   font-size: 2rem;
   color: #d1d5db;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   text-shadow: 0 0 10px rgba(209, 213, 219, 0.3);
   position: relative;
   z-index: 2;
   width: 100%;
   text-align: center;
-  min-height: 2.5rem; /* Added to ensure consistent spacing regardless of content */
+  min-height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -693,12 +791,19 @@ body {
 
 /* Media queries for responsiveness */
 @media (max-width: 1024px) {
+  .title-decoration {
+    max-width: 450px;
+    height: 450px;
+    top: 55%; /* Keep consistent with larger screens */
+  }
+  
   .main-title {
     font-size: 8rem;
+    margin-top: 55px; /* Adjusted for lowered orbit at this size */
   }
   
   .orbit-circle {
-    width: 450px; /* Adjusted for better visibility */
+    width: 450px;
     height: 450px;
   }
   
@@ -719,22 +824,24 @@ body {
 }
 
 @media (max-width: 768px) {
-  .hero-content {
-    padding: 1rem;
+  .title-decoration {
+    max-width: 350px;
+    height: 350px;
+    top: 55%; /* Keep consistent with larger screens */
   }
   
-  .title-container {
-    margin-bottom: 2rem;
+  .hero-content {
+    padding: 1rem;
   }
   
   .main-title {
     font-size: 5rem;
     letter-spacing: 0.25rem;
-    margin-bottom: 1.5rem;
+    margin-top: 40px; /* Adjusted for lowered orbit at this size */
   }
   
   .orbit-circle {
-    width: 350px; /* Adjusted for better visibility */
+    width: 350px;
     height: 350px;
   }
   
@@ -748,32 +855,29 @@ body {
     max-width: 350px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2rem;
-  }
-  
-  .hero-register-btn {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-content {
-    padding: 0.5rem;
+  .title-decoration {
+    max-width: 250px;
+    height: 250px;
+    top: 55%; /* Keep consistent with larger screens */
   }
   
-  .title-container {
-    margin-bottom: 1.5rem;
-    width: 100%;
+  .hero-content {
+    padding: 0.5rem;
   }
   
   .main-title {
     font-size: 3.5rem;
     letter-spacing: 0.15rem;
-    margin-bottom: 1rem;
+    margin-top: 30px; /* Adjusted for lowered orbit at this size */
   }
   
   .orbit-circle {
-    width: 250px; /* Adjusted for better visibility */
+    width: 250px;
     height: 250px;
   }
   
@@ -787,13 +891,31 @@ body {
     max-width: 250px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   
   .hero-register-btn {
     padding: 0.75rem 2rem;
     font-size: 1.125rem;
-    margin-top: 0.5rem;
+  }
+}
+
+/* Media queries for mobile adjustments */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding-top: 80px; /* Less padding needed for mobile layout */
+  }
+  
+  .header-content {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .college-logo {
+    height: 35px;
   }
 }
 
@@ -2481,5 +2603,31 @@ body {
     width: 40px;
     height: 40px;
     font-size: 1.25rem;
+  }
+}
+
+/* Add navbar wrapper styles */
+.navbar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding-top: 80px; /* Less padding needed for mobile layout */
+  }
+  
+  .header-content {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .college-logo {
+    height: 35px;
   }
 }
