@@ -1,55 +1,47 @@
 import { motion } from 'framer-motion';
-import { FaUsers, FaHandshake, FaWhatsapp } from 'react-icons/fa';
+import { FaUsers, FaHandshake, FaWhatsapp, FaSmile } from 'react-icons/fa';
 
 const CommunitySection = () => {
   const communityMembers = [
     {
-      name: 'Rachel Thomas',
+      name: 'Member Name 1',
       role: 'Community Leader',
-      image: 'https://randomuser.me/api/portraits/women/33.jpg',
-      contribution: 'Organizing local tech meetups and workshops'
+      contribution: 'Placeholder text for community contribution description.'
     },
     {
-      name: 'James Wilson',
+      name: 'Member Name 2',
       role: 'Technical Mentor',
-      image: 'https://randomuser.me/api/portraits/men/42.jpg',
-      contribution: 'Providing guidance to participants on technical challenges'
+      contribution: 'Placeholder text for community contribution description.'
     },
     {
-      name: 'Emma Zhang',
+      name: 'Member Name 3',
       role: 'Student Ambassador',
-      image: 'https://randomuser.me/api/portraits/women/26.jpg',
-      contribution: 'Connecting student communities with hackathon opportunities'
+      contribution: 'Placeholder text for community contribution description.'
     },
     {
-      name: 'Raj Patel',
+      name: 'Member Name 4',
       role: 'Industry Expert',
-      image: 'https://randomuser.me/api/portraits/men/58.jpg',
-      contribution: 'Offering insights on industry trends and market needs'
+      contribution: 'Placeholder text for community contribution description.'
     },
     {
-      name: 'Sophie Clark',
+      name: 'Member Name 5',
       role: 'Volunteer Coordinator',
-      image: 'https://randomuser.me/api/portraits/women/75.jpg',
-      contribution: 'Organizing volunteer efforts before and during the event'
+      contribution: 'Placeholder text for community contribution description.'
     },
     {
-      name: 'Omar Hassan',
+      name: 'Member Name 6',
       role: 'Previous Winner',
-      image: 'https://randomuser.me/api/portraits/men/72.jpg',
-      contribution: 'Sharing experiences and advice with new participants'
+      contribution: 'Placeholder text for community contribution description.'
     },
     {
-      name: 'Nina Rodriguez',
+      name: 'Member Name 7',
       role: 'Design Lead',
-      image: 'https://randomuser.me/api/portraits/women/62.jpg',
-      contribution: 'Helping teams with UX/UI design during the hackathon'
+      contribution: 'Placeholder text for community contribution description.'
     },
     {
-      name: 'Liu Wei',
+      name: 'Member Name 8',
       role: 'Content Creator',
-      image: 'https://randomuser.me/api/portraits/men/9.jpg',
-      contribution: 'Documenting hackathon experiences and sharing stories'
+      contribution: 'Placeholder text for community contribution description.'
     }
   ];
 
@@ -80,11 +72,9 @@ const CommunitySection = () => {
               className="community-member glass-effect"
             >
               <div className="member-image-container">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="member-image" 
-                />
+                <div className="smiley-placeholder">
+                  <FaSmile size={40} color="#4d82d6" />
+                </div>
               </div>
               <div className="member-details">
                 <h4 className="member-name">{member.name}</h4>
@@ -112,7 +102,7 @@ const CommunitySection = () => {
             </p>
             
             <div className="community-platforms">
-              <a href="https://chat.whatsapp.com/supernova-hackathon" target="_blank" rel="noopener noreferrer" className="platform-link whatsapp">
+              <a href="#" className="platform-link whatsapp">
                 <FaWhatsapp className="platform-icon" />
                 <span>Join our WhatsApp Group</span>
               </a>

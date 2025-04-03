@@ -1,60 +1,54 @@
 import { motion } from 'framer-motion';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin, FaSmile } from 'react-icons/fa';
 
 const OrganizersSection = () => {
   const organizers = [
     {
-      name: 'Alex Johnson',
+      name: 'Organizer Name 1',
       role: 'Event Coordinator',
-      image: 'https://randomuser.me/api/portraits/men/32.jpg',
-      bio: 'Alex has been organizing tech events for over 5 years with a focus on creating inclusive spaces for innovation.',
+      bio: 'Placeholder bio text. This person is responsible for coordinating all aspects of the hackathon event.',
       social: {
-        linkedin: 'https://linkedin.com/'
+        linkedin: '#'
       }
     },
     {
-      name: 'Samantha Lee',
+      name: 'Organizer Name 2',
       role: 'Technical Lead',
-      image: 'https://randomuser.me/api/portraits/women/44.jpg',
-      bio: 'Full-stack developer with expertise in emerging technologies and a passion for mentoring new developers.',
+      bio: 'Placeholder bio text. This person handles the technical infrastructure and provides support to participants.',
       social: {
-        linkedin: 'https://linkedin.com/'
+        linkedin: '#'
       }
     },
     {
-      name: 'Michael Chen',
+      name: 'Organizer Name 3',
       role: 'Sponsorship Manager',
-      image: 'https://randomuser.me/api/portraits/men/22.jpg',
-      bio: 'Michael builds partnerships between tech companies and educational initiatives to create opportunities for students.',
+      bio: 'Placeholder bio text. This person manages relationships with sponsors and secures funding for the event.',
       social: {
-        linkedin: 'https://linkedin.com/'
+        linkedin: '#'
       }
     },
     {
-      name: 'Priya Sharma',
+      name: 'Organizer Name 4',
       role: 'Marketing Director',
-      image: 'https://randomuser.me/api/portraits/women/28.jpg',
-      bio: 'Creative strategist with experience in digital marketing and community building for tech events.',
+      bio: 'Placeholder bio text. This person handles all promotional activities and social media presence.',
       social: {
-        linkedin: 'https://linkedin.com/'
+        linkedin: '#'
       }
     },
     {
-      name: 'David Wilson',
+      name: 'Organizer Name 5',
       role: 'Operations Manager',
-      image: 'https://randomuser.me/api/portraits/men/39.jpg',
-      bio: 'Logistics expert who ensures everything runs smoothly before, during, and after the event.',
+      bio: 'Placeholder bio text. This person ensures that all logistical aspects of the event run smoothly.',
       social: {
-        linkedin: 'https://linkedin.com/'
+        linkedin: '#'
       }
     },
     {
-      name: 'Aisha Patel',
+      name: 'Organizer Name 6',
       role: 'Participant Experience',
-      image: 'https://randomuser.me/api/portraits/women/63.jpg',
-      bio: 'Focuses on creating meaningful connections and memorable experiences for all hackathon participants.',
+      bio: 'Placeholder bio text. This person focuses on creating an excellent experience for all participants.',
       social: {
-        linkedin: 'https://linkedin.com/'
+        linkedin: '#'
       }
     }
   ];
@@ -79,11 +73,9 @@ const OrganizersSection = () => {
               className="organizer-card glass-effect"
             >
               <div className="organizer-image-container">
-                <img 
-                  src={organizer.image} 
-                  alt={organizer.name} 
-                  className="organizer-image" 
-                />
+                <div className="smiley-placeholder">
+                  <FaSmile size={50} color="#FFD700" />
+                </div>
               </div>
               
               <div className="organizer-info">
@@ -92,7 +84,7 @@ const OrganizersSection = () => {
                 <p className="organizer-bio">{organizer.bio}</p>
                 
                 <div className="organizer-social">
-                  <a href={organizer.social.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">
+                  <a href={organizer.social.linkedin} className="social-link">
                     <FaLinkedin />
                   </a>
                 </div>

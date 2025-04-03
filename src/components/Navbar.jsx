@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +23,13 @@ const Navbar = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMobileMenuOpen(false);
+  };
+
   const menuItems = [
+    { id: 'home', label: 'Home', icon: <FaHome />, action: scrollToTop },
     { id: 'about', label: 'About' },
     { id: 'info', label: 'Info' },
     { id: 'themes', label: 'Themes' },
@@ -44,8 +50,9 @@ const Navbar = () => {
               key={item.id}
               whileHover={{ scale: 1.05 }}
               className="navbar-link"
-              onClick={() => scrollToSection(item.id)}
+              onClick={item.action || (() => scrollToSection(item.id))}
             >
+              {item.icon && <span className="navbar-icon">{item.icon}</span>}
               {item.label}
             </motion.a>
           ))}
@@ -75,8 +82,9 @@ const Navbar = () => {
                   key={item.id}
                   whileTap={{ scale: 0.95 }}
                   className="mobile-menu-link"
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={item.action || (() => scrollToSection(item.id))}
                 >
+                  {item.icon && <span className="navbar-icon">{item.icon}</span>}
                   {item.label}
                 </motion.a>
               ))}
