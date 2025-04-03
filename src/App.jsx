@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import StarBackground from './components/StarBackground';
-import CursorEffects from './components/CursorEffects';
 import HeroSection from './components/HeroSection';
-import FeaturesSection from './components/FeaturesSection';
 import AboutSection from './components/AboutSection';
+import ThemesSection from './components/ThemesSection';
 import TimelineSection from './components/TimelineSection';
+import PrizesSection from './components/PrizesSection';
+import FAQsSection from './components/FAQsSection';
+import OrganizersSection from './components/OrganizersSection';
+import CommunitySection from './components/CommunitySection';
+import Footer from './components/Footer';
 
 function App() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [windowSize, setWindowSize] = useState({
     width: typeof window !== 'undefined' ? window.innerWidth : 0,
     height: typeof window !== 'undefined' ? window.innerHeight : 0,
@@ -65,12 +68,8 @@ function App() {
     return () => clearInterval(timer);
   }, []);
 
-  // Handle mouse movement and window resize
+  // Handle window resize
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
     const handleResize = () => {
       setWindowSize({
         width: window.innerWidth,
@@ -78,11 +77,9 @@ function App() {
       });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('resize', handleResize);
     
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
@@ -98,23 +95,25 @@ function App() {
       <Header />
       
       {/* Background Effects */}
-      <StarBackground mousePosition={mousePosition} windowSize={windowSize} />
-      <CursorEffects mousePosition={mousePosition} />
+      <StarBackground mousePosition={{ x: 0, y: 0 }} windowSize={windowSize} />
 
-      {/* Main content */}
+      {/* Main content arranged according to navbar */}
       <div className="content-wrapper">
         {/* Hero Section */}
-        <HeroSection timeLeft={timeLeft} />
-
-        {/* Features Section */}
-        <FeaturesSection />
-
-        {/* About Section */}
+        <HeroSection />
+        
+        {/* Sections ordered according to navbar */}
         <AboutSection />
-
-        {/* Timeline Section */}
+        <ThemesSection />
         <TimelineSection />
+        <PrizesSection />
+        <FAQsSection />
+        <OrganizersSection />
+        <CommunitySection />
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

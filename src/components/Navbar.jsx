@@ -1,80 +1,90 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState('home');
-  
-  // Handle scroll event to track active section
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      // Track active section
-      const sections = ['home', 'features', 'about', 'timeline'];
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 200 && rect.bottom >= 200) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle smooth scrolling when clicking nav links
-  const scrollToSection = (sectionId, e) => {
-    e.preventDefault();
+  const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 100,
-        behavior: 'smooth'
-      });
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
     }
   };
 
+  const menuItems = [
+    { id: 'about', label: 'About' },
+    { id: 'info', label: 'Info' },
+    { id: 'themes', label: 'Themes' },
+    { id: 'timeline', label: 'Timeline' },
+    { id: 'prizes', label: 'Prizes' },
+    { id: 'faqs', label: 'FAQs' },
+    { id: 'organizers', label: 'Organizers' },
+    { id: 'community', label: 'Community' }
+  ];
+
   return (
-    <motion.nav 
-      className="navbar navbar-scrolled" 
-      initial={{ y: -100, opacity: 1 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-    >
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <ul className="navbar-links" style={{ justifyContent: 'center' }}>
-          {['Home', 'Features', 'About', 'Timeline', 'Register'].map((item, index) => (
-            <motion.li 
-              key={index}
-              className="navbar-item"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+        {/* Desktop Menu */}
+        <div className="navbar-links desktop-menu">
+          {menuItems.map((item) => (
+            <motion.a
+              key={item.id}
+              whileHover={{ scale: 1.05 }}
+              className="navbar-link"
+              onClick={() => scrollToSection(item.id)}
             >
-              <a 
-                href={`#${item.toLowerCase()}`} 
-                className={`navbar-link ${activeSection === item.toLowerCase() ? 'active' : ''}`}
-                onClick={(e) => scrollToSection(item.toLowerCase(), e)}
-              >
-                {item}
-              </a>
-              <motion.div 
-                className="navbar-link-underline"
-                initial={{ width: activeSection === item.toLowerCase() ? '100%' : 0 }}
-                animate={{ width: activeSection === item.toLowerCase() ? '100%' : 0 }}
-                whileHover={{ width: '100%' }}
-                transition={{ duration: 0.3 }}
-              />
-            </motion.li>
+              {item.label}
+            </motion.a>
           ))}
-        </ul>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="mobile-menu-btn"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              className="mobile-menu"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+            >
+              {menuItems.map((item) => (
+                <motion.a
+                  key={item.id}
+                  whileTap={{ scale: 0.95 }}
+                  className="mobile-menu-link"
+                  onClick={() => scrollToSection(item.id)}
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 

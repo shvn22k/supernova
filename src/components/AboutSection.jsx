@@ -1,48 +1,105 @@
 import { motion } from 'framer-motion';
-import { FaInfoCircle, FaLightbulb } from 'react-icons/fa';
+import { FaRocket, FaLightbulb, FaUsers, FaCode } from 'react-icons/fa';
 
 const AboutSection = () => {
   return (
     <section className="about" id="about">
-      <h2 className="section-title">About</h2>
-      <div className="about-container glass-effect">
+      <div className="section-container">
+        <h2 className="section-title">About SuperNova</h2>
+        
+        {/* Mission Statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mission-container glass-effect"
+        >
+          <div className="mission-icon-wrapper">
+            <FaRocket className="mission-icon" />
+          </div>
+          <h3 className="mission-title">Our Mission</h3>
+          <p className="mission-text">
+            SuperNova brings together creative minds to build innovative solutions inspired by the cosmos. 
+            We provide a platform where diverse talents can collaborate, creating technology that matters. 
+            Our goal is to foster an environment where new ideas can take flight, pushing the boundaries 
+            of what's possible in just 8 hours of focused innovation.
+          </p>
+        </motion.div>
+
+        {/* About Content */}
         <div className="about-content">
-          <motion.div 
-            className="about-icon-container"
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <FaInfoCircle className="about-icon" style={{ color: '#ffffff' }} />
-          </motion.div>
-          
           <motion.div
-            className="about-text-container"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="about-text-container glass-effect"
           >
             <p className="about-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie. Morbi blandit eu dolor a luctus. Vestibulum sollicitudin elit ac nunc scelerisque rhoncus. Nulla felis sapien, condimentum ut imperdiet vel, aliquet id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+              Join us for SuperNova, an engaging 8-hour in-person hackathon where creativity and 
+              technical skills come together in a space-themed innovation challenge.
             </p>
-            
             <p className="about-text">
-              Mauris ut mauris sit amet sem commodo commodo in nec lorem. Duis non mi nec orci ultricies accumsan. Donec vitae pharetra massa. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras vel metus vel enim lobortis vehicula. Pellentesque et sem a tellus ultrices consequat.
+              After our online application review on Devfolio, selected participants will gather 
+              for a day of focused development, teamwork, and problem-solving. SuperNova brings 
+              together programmers, designers, and innovators to collaborate on fresh solutions 
+              within our cosmic-inspired environment.
+            </p>
+            <p className="about-text">
+              Put your skills to the test as you work on interesting problems, connect with fellow 
+              tech enthusiasts, and create something meaningful in just 8 hours. Our judges will 
+              evaluate projects based on originality, technical execution, and practical applications.
+            </p>
+            <p className="about-text">
+              Whether you're an experienced developer or just starting your coding journey, SuperNova 
+              offers a great opportunity to bring your ideas to life. Bring your laptop, your creativity, 
+              and your problem-solving mindset.
+            </p>
+            <p className="about-text highlight">
+              Applications are open on Devfolio. Looking forward to seeing what you create!
             </p>
           </motion.div>
 
-          <motion.div 
-            className="about-highlight glass-effect"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <FaLightbulb className="highlight-icon" style={{ color: '#ffffff' }} />
-            <div className="highlight-text">
-              <h3>Our Mission</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum tortor, vitae venenatis lectus. Praesent gravida dapibus neque sit amet molestie.</p>
-            </div>
-          </motion.div>
+          {/* Highlights */}
+          <div className="about-highlights">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="about-highlight"
+            >
+              <FaLightbulb className="highlight-icon" />
+              <div className="highlight-text">
+                <h3>Innovation Focus</h3>
+                <p>Challenges that push creative boundaries</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="about-highlight"
+            >
+              <FaUsers className="highlight-icon" />
+              <div className="highlight-text">
+                <h3>Collaborative Environment</h3>
+                <p>Connect with fellow innovators and form lasting connections</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="about-highlight"
+            >
+              <FaCode className="highlight-icon" />
+              <div className="highlight-text">
+                <h3>Hands-on Development</h3>
+                <p>8 hours of focused coding and problem-solving</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
