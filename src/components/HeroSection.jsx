@@ -88,7 +88,7 @@ const HeroSection = () => {
               {!isTypingComplete && <span className="cursor-blink"></span>}
             </div>
             
-            <a href="https://devfolio.co" target="_blank" rel="noopener noreferrer">
+            <a href="https://supernova-hacks.devfolio.co/" target="_blank" rel="noopener noreferrer">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

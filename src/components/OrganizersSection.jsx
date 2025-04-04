@@ -4,48 +4,48 @@ import { FaLinkedin, FaSmile } from 'react-icons/fa';
 const OrganizersSection = () => {
   const organizers = [
     {
-      name: 'Organizer Name 1',
-      role: 'Event Coordinator',
-      bio: 'Placeholder bio text. This person is responsible for coordinating all aspects of the hackathon event.',
-      social: {
-        linkedin: '#'
-      }
-    },
-    {
-      name: 'Organizer Name 2',
-      role: 'Technical Lead',
-      bio: 'Placeholder bio text. This person handles the technical infrastructure and provides support to participants.',
-      social: {
-        linkedin: '#'
-      }
-    },
-    {
-      name: 'Organizer Name 3',
-      role: 'Sponsorship Manager',
-      bio: 'Placeholder bio text. This person manages relationships with sponsors and secures funding for the event.',
-      social: {
-        linkedin: '#'
-      }
-    },
-    {
-      name: 'Organizer Name 4',
-      role: 'Marketing Director',
+      name: 'Moksha Kohli',
+      role: 'Sponsorship Lead',
       bio: 'Placeholder bio text. This person handles all promotional activities and social media presence.',
       social: {
         linkedin: '#'
       }
     },
     {
-      name: 'Organizer Name 5',
-      role: 'Operations Manager',
-      bio: 'Placeholder bio text. This person ensures that all logistical aspects of the event run smoothly.',
+      name: 'Kashish Verma',
+      role: 'President',
+      bio: '',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/kashish-verma-b54a85215/'
+      }
+    },
+    {
+      name: 'Pranshu Kamboj',
+      role: 'Operational Lead',
+      bio: 'I lead hackathons with energy and organization to help teams turn concepts into reality.',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/pranshu-kamboj-0a6896259/'
+      }
+    },
+    {
+      name: 'Satyam Jaiswal',
+      role: 'Event coordinator',
+      bio: 'Placeholder bio text. This person manages relationships with sponsors and secures funding for the event.',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/satyam-jaiswal-1ab701259'
+      }
+    },
+    {
+      name: 'Shiven Kumar Shandil',
+      role: 'Technical Lead',
+      bio: 'yoo, i vibe coded this site (hire me pls)',
       social: {
         linkedin: '#'
       }
     },
     {
-      name: 'Organizer Name 6',
-      role: 'Participant Experience',
+      name: 'Sahil Khatri',
+      role: 'Social Media Lead',
       bio: 'Placeholder bio text. This person focuses on creating an excellent experience for all participants.',
       social: {
         linkedin: '#'
