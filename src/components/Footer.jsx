@@ -13,7 +13,7 @@ const Footer = () => {
             <FaPhone /> +91 82877 10264
           </a>
           <a href="#location" className="footer-link">
-            <FaMapMarkerAlt /> G.L. Bajaj Institute of Technology
+            <FaMapMarkerAlt /> G.L. Bajaj Institute of Technology and Management
           </a>
         </div>
 

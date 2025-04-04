@@ -5,44 +5,44 @@ const CommunitySection = () => {
   const communityMembers = [
     {
       name: 'Member Name 1',
-      role: 'Community Leader',
+      role: 'Description',
       contribution: 'Placeholder text for community contribution description.'
     },
     {
       name: 'Member Name 2',
-      role: 'Technical Mentor',
+      role: 'Description',
       contribution: 'Placeholder text for community contribution description.'
     },
-    {
-      name: 'Member Name 3',
-      role: 'Student Ambassador',
-      contribution: 'Placeholder text for community contribution description.'
-    },
-    {
-      name: 'Member Name 4',
-      role: 'Industry Expert',
-      contribution: 'Placeholder text for community contribution description.'
-    },
-    {
-      name: 'Member Name 5',
-      role: 'Volunteer Coordinator',
-      contribution: 'Placeholder text for community contribution description.'
-    },
-    {
-      name: 'Member Name 6',
-      role: 'Previous Winner',
-      contribution: 'Placeholder text for community contribution description.'
-    },
-    {
-      name: 'Member Name 7',
-      role: 'Design Lead',
-      contribution: 'Placeholder text for community contribution description.'
-    },
-    {
-      name: 'Member Name 8',
-      role: 'Content Creator',
-      contribution: 'Placeholder text for community contribution description.'
-    }
+    // {
+    //   name: 'Member Name 3',
+    //   role: 'Student Ambassador',
+    //   contribution: 'Placeholder text for community contribution description.'
+    // },
+    // {
+    //   name: 'Member Name 4',
+    //   role: 'Industry Expert',
+    //   contribution: 'Placeholder text for community contribution description.'
+    // },
+    // {
+    //   name: 'Member Name 5',
+    //   role: 'Volunteer Coordinator',
+    //   contribution: 'Placeholder text for community contribution description.'
+    // },
+    // {
+    //   name: 'Member Name 6',
+    //   role: 'Previous Winner',
+    //   contribution: 'Placeholder text for community contribution description.'
+    // },
+    // {
+    //   name: 'Member Name 7',
+    //   role: 'Design Lead',
+    //   contribution: 'Placeholder text for community contribution description.'
+    // },
+    // {
+    //   name: 'Member Name 8',
+    //   role: 'Content Creator',
+    //   contribution: 'Placeholder text for community contribution description.'
+    // }
   ];
 
   return (
@@ -61,7 +61,7 @@ const CommunitySection = () => {
           </p>
         </div>
         
-        <h3 className="community-grid-title">Community Members</h3>
+        <h3 className="community-grid-title">Community Partners (coming soon)</h3>
         <div className="community-grid">
           {communityMembers.map((member, index) => (
             <motion.div
