@@ -6,16 +6,16 @@ const OrganizersSection = () => {
     {
       name: 'Attiuttama Mishra',
       role: 'Faculty Coordinator',
-      bio: '',
+      bio: 'The calm in our chaos, the strength behind the scenes. With unmatched wisdom and steady support, she turns challenges into clarity — and keeps us moving forward.',
       social: {
         linkedin: 'https://www.linkedin.com/in/attiuttama-mishra-10a61a1a9/'
       },
-      image: '/maam.png'
+      image: '/maam.jpeg'
     },
     {
-      name: 'Abhyudaya Club',
+      name: 'Abhyudaya Core',
       role: 'Organizing Body',
-      bio: 'Official Club of CSAIML Department of GLBITM',
+      bio: '(koi achhi si cool si tagline suggest krdo pls)',
       social: {
         linkedin: 'https://www.linkedin.com/company/abhyudayaclub/posts/?feedView=all'
       },
