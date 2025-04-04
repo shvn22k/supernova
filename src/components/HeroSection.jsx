@@ -155,7 +155,7 @@ const HeroSection = () => {
               </div>
               <div className="event-info-content">
                 <div className="event-info-label">Duration:</div>
-                <div className="event-info-value">8 hours (may extend to 24 hours)</div>
+                <div className="event-info-value">8 hours</div>
               </div>
             </div>
 
@@ -195,7 +195,7 @@ const HeroSection = () => {
               </div>
               <div className="event-info-content">
                 <div className="event-info-label">Venue:</div>
-                <div className="event-info-value">G.L. Bajaj Institute of Technology</div>
+                <div className="event-info-value">G.L. Bajaj Institute of Technology And Management</div>
               </div>
             </div>
           </div>

@@ -5,56 +5,56 @@ import { MdPresentToAll } from 'react-icons/md';
 const TimelineSection = () => {
   const events = [
     {
-      time: "8 - 9:30 AM",
+      time: "8:00 - 8:45 AM",
       title: "REGISTRATION",
       description: "Check-in and get your participant kit",
       icon: <FaUsers />
     },
     {
-      time: "9:45 - 11 AM",
+      time: "9:00 - 10:00 AM",
       title: "INAUGURATION CEREMONY",
       description: "Official opening of the hackathon event",
       icon: <FaCalendarAlt />
     },
+    // {
+    //   time: "4th APRIL",
+    //   title: "PROBLEM STATEMENT RELEASE",
+    //   description: "Hackathon problem statements are announced",
+    //   icon: <FaClipboardList />
+    // },
     {
-      time: "4th APRIL",
-      title: "PROBLEM STATEMENT RELEASE",
-      description: "Hackathon problem statements are announced",
-      icon: <FaClipboardList />
-    },
-    {
-      time: "11 - 1:30 PM",
-      title: "8-HOUR HACKING SESSION",
+      time: "10:15 - 12:00",
+      title: "Hacking session 1",
       description: "First half of the coding marathon begins",
       icon: <FaLaptopCode />
     },
     {
-      time: "1:30 - 2 PM",
-      title: "LUNCH BREAK",
-      description: "Refuel and recharge for the next session",
+      time: "12:00 - 12:30",
+      title: "Mentorship round",
+      description: "Get guidance from industry experts and receive feedback",
       icon: <FaClock />
     },
     {
-      time: "In between hacking session",
-      title: "MENTORING & MIDWAY EVALUATIONS",
-      description: "Get guidance from industry experts and receive feedback",
+      time: "12:45 - 1:30 PM",
+      title: "Lunch Break",
+      description: "We'll provide good food and beverages.",
       icon: <FaChalkboardTeacher />
     },
     {
-      time: "2:10 - 4:50 PM",
-      title: "FINAL PROJECT SUBMISSIONS",
-      description: "Submit your completed projects for evaluation",
+      time: "1:45 PM - 4:20 PM",
+      title: "Hacking session 2",
+      description: "Final project submissions and judging rounds.",
       icon: <FaClipboardList />
     },
     {
-      time: "2:10 - 4:50 PM",
-      title: "DEMO & PITCH PRESENTATIONS",
+      time: "4:20 - 5:00 PM",
+      title: "JUDGING & PITCH PRESENTATIONS",
       description: "Present your projects to the judges",
       icon: <MdPresentToAll />
     },
     {
       time: "5 - 6 PM",
-      title: "JUDGING & AWARD CEREMONY",
+      title: "AWARD CEREMONY",
       description: "Winners are announced and prizes are distributed",
       icon: <FaTrophy />
     }
