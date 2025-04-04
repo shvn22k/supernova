@@ -114,9 +114,12 @@ const HeroSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="hero-register-btn"
+                className="devfolio-button"
               >
-                Register Now
+                <div className="devfolio-button-contents">
+                  <span className="devfolio-logo">▶</span>
+                  <span>Apply with Devfolio</span>
+                </div>
               </motion.button>
             </a>
           </motion.div>

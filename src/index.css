@@ -2757,3 +2757,42 @@ body {
   width: 100%;
   height: 100%;
 }
+
+/* Devfolio Button Styling */
+.devfolio-button {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 312px;
+  height: 44px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.devfolio-button-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 8px;
+}
+
+.devfolio-logo {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.devfolio-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
