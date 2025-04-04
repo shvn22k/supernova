@@ -71,7 +71,7 @@ const DevfolioButton = ({ hackathonSlug = "supernova-hacks", theme = "light" }) 
       
       {(!scriptLoaded || !buttonVisible) && (
         <a 
-          href={`https://devfolio.co/projects/${hackathonSlug}`} 
+          href={`https://${hackathonSlug}.devfolio.co/`} 
           target="_blank" 
           rel="noopener noreferrer"
           style={{ textDecoration: 'none' }}
