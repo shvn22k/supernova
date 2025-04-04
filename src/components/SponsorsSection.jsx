@@ -19,7 +19,7 @@ const SponsorsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <img src="/devfoliologo.png" alt="Devfolio Logo" className="sponsor-logo" />
+                <img src="/devfolio.png" alt="DEVFOLIO LOGO" className="sponsor-logo" />
               </motion.div>
             </div>
           </div>
@@ -34,7 +34,7 @@ const SponsorsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <img src="/ethindia-logo.png" alt="ETHIndia Logo" className="sponsor-logo" />
+                <img src="/ethindia-dark.png" alt="ETHINDIA LOGO" className="sponsor-logo" />
               </motion.div>
             </div>
           </div>
