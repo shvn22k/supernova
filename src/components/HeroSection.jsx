@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 import { FaCalendar, FaClock, FaGlobe, FaUsers, FaMapMarkerAlt } from 'react-icons/fa';
+import DevfolioButton from './DevfolioButton';
 
 const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -61,28 +62,6 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Load Devfolio script
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apply.devfolio.co/v2/sdk.js';
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-    
-    // For debugging
-    script.onload = () => {
-      console.log('Devfolio script loaded successfully');
-    };
-    
-    script.onerror = () => {
-      console.error('Error loading Devfolio script');
-    };
-    
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, []);
-
   return (
     <>
       <section className="hero" id="home">
@@ -110,18 +89,7 @@ const HeroSection = () => {
               {!isTypingComplete && <span className="cursor-blink"></span>}
             </div>
             
-            <a href="https://supernova-hacks.devfolio.co/" target="_blank" rel="noopener noreferrer">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="devfolio-button"
-              >
-                <div className="devfolio-button-contents">
-                  <span className="devfolio-logo">▶</span>
-                  <span>Apply with Devfolio</span>
-                </div>
-              </motion.button>
-            </a>
+            <DevfolioButton hackathonSlug="supernova" theme="light" />
           </motion.div>
         </div>
       </section>
