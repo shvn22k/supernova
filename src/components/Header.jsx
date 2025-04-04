@@ -56,6 +56,7 @@ const Header = () => {
     { id: 'themes', label: 'Themes' },
     { id: 'timeline', label: 'Timeline' },
     { id: 'prizes', label: 'Prizes' },
+    { id: 'sponsors', label: 'Sponsors' },
     { id: 'faqs', label: 'FAQs' },
     { id: 'organizers', label: 'Organizers' },
     { id: 'community', label: 'Community' }

@@ -6,6 +6,7 @@ import AboutSection from './components/AboutSection';
 import ThemesSection from './components/ThemesSection';
 import TimelineSection from './components/TimelineSection';
 import PrizesSection from './components/PrizesSection';
+import SponsorsSection from './components/SponsorsSection';
 import FAQsSection from './components/FAQsSection';
 import OrganizersSection from './components/OrganizersSection';
 import CommunitySection from './components/CommunitySection';
@@ -107,6 +108,7 @@ function App() {
         <ThemesSection />
         <TimelineSection />
         <PrizesSection />
+        <SponsorsSection />
         <FAQsSection />
         <OrganizersSection />
         <CommunitySection />

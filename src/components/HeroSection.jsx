@@ -61,6 +61,28 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Load Devfolio script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    
+    // For debugging
+    script.onload = () => {
+      console.log('Devfolio script loaded successfully');
+    };
+    
+    script.onerror = () => {
+      console.error('Error loading Devfolio script');
+    };
+    
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
+
   return (
     <>
       <section className="hero" id="home">
@@ -88,15 +110,28 @@ const HeroSection = () => {
               {!isTypingComplete && <span className="cursor-blink"></span>}
             </div>
             
-            <a href="https://supernova-hacks.devfolio.co/" target="_blank" rel="noopener noreferrer">
+            {/* Devfolio Button */}
+            <div 
+              className="apply-button" 
+              data-hackathon-slug="YOUR-HACKATHON-SLUG" 
+              data-button-theme="light"
+              style={{ height: 44, width: 312, margin: '2rem auto 0', border: '1px dashed #666' }}
+            ></div>
+            
+            {/* Fallback Register Button */}
+            <a href="https://devfolio.co/discover" target="_blank" rel="noopener noreferrer" style={{marginTop: '2rem', display: 'block'}}>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="hero-register-btn"
               >
-                Register Now
+                Register on Devfolio
               </motion.button>
             </a>
+            
+            {/* Debugging note */}
+            <div style={{marginTop: '1rem', fontSize: '0.8rem', color: '#aaa', textAlign: 'center'}}>
+            </div>
           </motion.div>
         </div>
       </section>
