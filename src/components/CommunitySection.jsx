@@ -102,7 +102,7 @@ const CommunitySection = () => {
             </p>
             
             <div className="community-platforms">
-              <a href="#" className="platform-link whatsapp">
+              <a href="https://chat.whatsapp.com/FT7hcIwBBGMGEMuh66qCzO" className="platform-link whatsapp">
                 <FaWhatsapp className="platform-icon" />
                 <span>Join our WhatsApp Group</span>
               </a>
