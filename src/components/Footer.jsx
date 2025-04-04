@@ -6,11 +6,11 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3 className="footer-title">Contact Us</h3>
-          <a href="mailto:acse.club@glbitm.ac.in" className="footer-link">
-            <FaEnvelope /> acse.club@glbitm.ac.in
+          <a href="mailto:help.supernovahacks@gmail.com" className="footer-link">
+            <FaEnvelope /> help.supernovahacks@gmail.com
           </a>
-          <a href="tel:+1234567890" className="footer-link">
-            <FaPhone /> let me know kiska number daalu
+          <a href="tel:+91 82877 10264" className="footer-link">
+            <FaPhone /> +91 82877 10264
           </a>
           <a href="#location" className="footer-link">
             <FaMapMarkerAlt /> G.L. Bajaj Institute of Technology
@@ -33,9 +33,9 @@ const Footer = () => {
           <a href="https://www.linkedin.com/company/abhyudayaclub/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="footer-link">
             <FaLinkedin /> LinkedIn
           </a>
-          <a href="https://www.vizion.com/wp-content/smush-webp/2018/09/shutterstock_479042983.jpg.webp" target="_blank" rel="noopener noreferrer" className="footer-link">
+          {/* <a href="https://www.vizion.com/wp-content/smush-webp/2018/09/shutterstock_479042983.jpg.webp" target="_blank" rel="noopener noreferrer" className="footer-link">
             <FaDiscord /> Discord
-          </a>
+          </a> */}
         </div>
       </div>
 

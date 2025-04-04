@@ -104,7 +104,7 @@ const FAQsSection = () => {
           className="contact-question glass-effect"
         >
           <h3>Still have questions?</h3>
-          <p>Reach out to us at <a href="mailto:acse.club@glbitm.ac.in">acse.club@glbitm.ac.in</a></p>
+          <p>Reach out to us at <a href="mailto:help.supernovahacks@gmail.com">help.supernovahacks@gmail.com</a></p>
         </motion.div>
       </div>
     </section>
