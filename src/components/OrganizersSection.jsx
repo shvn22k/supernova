@@ -55,7 +55,7 @@ const OrganizersSection = () => {
       social: {
         linkedin: 'https://www.linkedin.com/in/aditi-singh-13686b24a/'
       },
-      image: '/sahil.jpg'
+      image: '/aditi.jpeg'
     }
   ];
 
