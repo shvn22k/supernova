@@ -4,13 +4,22 @@ import { FaLinkedin, FaSmile } from 'react-icons/fa';
 const OrganizersSection = () => {
   const organizers = [
     {
-      name: 'Moksha Kohli',
-      role: 'Sponsorship Lead',
-      bio: 'With a knack for building strong corporate ties and sealing game-changing deals, I ensure our hackathon is backed by the best.',
+      name: 'Attiuttama Mishra',
+      role: 'Faculty Coordinator',
+      bio: '',
       social: {
-        linkedin: 'https://www.linkedin.com/in/moksha-kohli-434513229/'
+        linkedin: 'https://www.linkedin.com/in/attiuttama-mishra-10a61a1a9/'
       },
-      image: '/moksha.jpg'
+      image: '/maam.png'
+    },
+    {
+      name: 'Abhyudaya Club',
+      role: 'Organizing Body',
+      bio: 'Official Club of CSAIML Department of GLBITM',
+      social: {
+        linkedin: 'https://www.linkedin.com/company/abhyudayaclub/posts/?feedView=all'
+      },
+      image: '/abhyudaya.webp'
     },
     {
       name: 'Kashish Verma',
@@ -20,6 +29,15 @@ const OrganizersSection = () => {
         linkedin: 'https://www.linkedin.com/in/kashish-verma-b54a85215/'
       },
       image: '/kashish.jpg'
+    },
+    {
+      name: 'Moksha Kohli',
+      role: 'Sponsorship Lead',
+      bio: 'With a knack for building strong corporate ties and sealing game-changing deals, I ensure our hackathon is backed by the best.',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/moksha-kohli-434513229/'
+      },
+      image: '/moksha.jpg'
     },
     {
       name: 'Pranshu Kamboj',
