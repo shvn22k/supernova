@@ -110,28 +110,15 @@ const HeroSection = () => {
               {!isTypingComplete && <span className="cursor-blink"></span>}
             </div>
             
-            {/* Devfolio Button */}
-            <div 
-              className="apply-button" 
-              data-hackathon-slug="YOUR-HACKATHON-SLUG" 
-              data-button-theme="light"
-              style={{ height: 44, width: 312, margin: '2rem auto 0', border: '1px dashed #666' }}
-            ></div>
-            
-            {/* Fallback Register Button */}
-            <a href="https://devfolio.co/discover" target="_blank" rel="noopener noreferrer" style={{marginTop: '2rem', display: 'block'}}>
+            <a href="https://supernova-hacks.devfolio.co/" target="_blank" rel="noopener noreferrer">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="hero-register-btn"
               >
-                Register on Devfolio
+                Register Now
               </motion.button>
             </a>
-            
-            {/* Debugging note */}
-            <div style={{marginTop: '1rem', fontSize: '0.8rem', color: '#aaa', textAlign: 'center'}}>
-            </div>
           </motion.div>
         </div>
       </section>
