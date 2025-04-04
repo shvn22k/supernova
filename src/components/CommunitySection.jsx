@@ -6,42 +6,50 @@ const CommunitySection = () => {
     {
       name: 'Member Name 1',
       role: 'Description',
-      contribution: 'Placeholder text for community contribution description.'
+      contribution: 'Placeholder text for community contribution description.',
+      image: '/team-member-1.jpg'
     },
     {
       name: 'Member Name 2',
       role: 'Description',
-      contribution: 'Placeholder text for community contribution description.'
+      contribution: 'Placeholder text for community contribution description.',
+      image: '/team-member-2.jpg'
     },
     {
       name: 'Member Name 3',
       role: 'Student Ambassador',
-      contribution: 'Placeholder text for community contribution description.'
+      contribution: 'Placeholder text for community contribution description.',
+      image: '/team-member-3.jpg'
     },
     {
       name: 'Member Name 4',
       role: 'Industry Expert',
-      contribution: 'Placeholder text for community contribution description.'
+      contribution: 'Placeholder text for community contribution description.',
+      image: '/team-member-4.jpg'
     },
     {
       name: 'Member Name 5',
       role: 'Volunteer Coordinator',
-      contribution: 'Placeholder text for community contribution description.'
+      contribution: 'Placeholder text for community contribution description.',
+      image: '/team-member-5.jpg'
     },
     {
       name: 'Member Name 6',
       role: 'Previous Winner',
-      contribution: 'Placeholder text for community contribution description.'
+      contribution: 'Placeholder text for community contribution description.',
+      image: '/team-member-6.jpg'
     },
     {
       name: 'Member Name 7',
       role: 'Design Lead',
-      contribution: 'Placeholder text for community contribution description.'
+      contribution: 'Placeholder text for community contribution description.',
+      image: '/team-member-7.jpg'
     },
     {
       name: 'Member Name 8',
       role: 'Content Creator',
-      contribution: 'Placeholder text for community contribution description.'
+      contribution: 'Placeholder text for community contribution description.',
+      image: '/team-member-8.jpg'
     }
   ];
 
@@ -72,9 +80,17 @@ const CommunitySection = () => {
               className="community-member glass-effect"
             >
               <div className="member-image-container">
-                <div className="smiley-placeholder">
-                  <FaSmile size={40} color="#4d82d6" />
-                </div>
+                {member.image ? (
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="member-image" 
+                  />
+                ) : (
+                  <div className="smiley-placeholder">
+                    <FaSmile size={40} color="#4d82d6" />
+                  </div>
+                )}
               </div>
               <div className="member-details">
                 <h4 className="member-name">{member.name}</h4>

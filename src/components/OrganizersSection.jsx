@@ -6,50 +6,56 @@ const OrganizersSection = () => {
     {
       name: 'Moksha Kohli',
       role: 'Sponsorship Lead',
-      bio: 'Placeholder bio text. This person handles all promotional activities and social media presence.',
+      bio: 'With a knack for building strong corporate ties and sealing game-changing deals, I ensure our hackathon is backed by the best.',
       social: {
-        linkedin: '#'
-      }
+        linkedin: 'https://www.linkedin.com/in/moksha-kohli-434513229/'
+      },
+      image: '/moksha.jpg'
     },
     {
       name: 'Kashish Verma',
       role: 'President',
-      bio: '',
+      bio: 'CEO of “lets just do it and see what happens.” If it works, it was the plan all along.',
       social: {
         linkedin: 'https://www.linkedin.com/in/kashish-verma-b54a85215/'
-      }
+      },
+      image: '/kashish.jpg'
     },
     {
       name: 'Pranshu Kamboj',
       role: 'Operational Lead',
-      bio: 'I lead hackathons with energy and organization to help teams turn concepts into reality.',
+      bio: 'Ensures seamless execution, from logistics to coordination, creating an environment where innovation thrives. Passionate about tech, management, and bringing ideas to life!',
       social: {
         linkedin: 'https://www.linkedin.com/in/pranshu-kamboj-0a6896259/'
-      }
+      },
+      image: '/pranshu.jpg'
     },
     {
       name: 'Satyam Jaiswal',
       role: 'Event coordinator',
-      bio: 'Placeholder bio text. This person manages relationships with sponsors and secures funding for the event.',
+      bio: 'Timekeeper, vibe manager, and occasional therapist for panicking speakers. If they had a rupee for every “just one small change,” the event would be fully funded.',
       social: {
         linkedin: 'https://www.linkedin.com/in/satyam-jaiswal-1ab701259'
-      }
+      },
+      image: '/satyam.jpg'
     },
     {
       name: 'Shiven Kumar Shandil',
       role: 'Technical Lead',
-      bio: 'yoo, i vibe coded this site (hire me pls)',
+      bio: 'yoo, i vibe coded this site (need internship for aiml roles :D hire me pls)',
       social: {
-        linkedin: '#'
-      }
+        linkedin: 'https://www.linkedin.com/in/shiven-k-58b423212/'
+      },
+      image: '/shiven.png'
     },
     {
-      name: 'Sahil Khatri',
+      name: 'Aditi Singh',
       role: 'Social Media Lead',
-      bio: 'Placeholder bio text. This person focuses on creating an excellent experience for all participants.',
+      bio: 'Breathes reels, speaks in hashtags. Can turn a random moment into peak content and make chaos look curated.',
       social: {
-        linkedin: '#'
-      }
+        linkedin: 'https://www.linkedin.com/in/aditi-singh-13686b24a/'
+      },
+      image: '/sahil.jpg'
     }
   ];
 
@@ -73,9 +79,17 @@ const OrganizersSection = () => {
               className="organizer-card glass-effect"
             >
               <div className="organizer-image-container">
-                <div className="smiley-placeholder">
-                  <FaSmile size={50} color="#FFD700" />
-                </div>
+                {organizer.image ? (
+                  <img 
+                    src={organizer.image} 
+                    alt={organizer.name} 
+                    className="organizer-image" 
+                  />
+                ) : (
+                  <div className="smiley-placeholder">
+                    <FaSmile size={50} color="#FFD700" />
+                  </div>
+                )}
               </div>
               
               <div className="organizer-info">
