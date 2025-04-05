@@ -85,7 +85,7 @@ const OrganizersSection = () => {
       social: {
         linkedin: '#'
       },
-      image: '/team-member-4.jpg'
+      image: '/hardik.jpg'
     },
     {
       name: 'Aditya',
@@ -109,7 +109,7 @@ const OrganizersSection = () => {
       social: {
         linkedin: '#'
       },
-      image: '/team-member-7.jpg'
+      image: '/saras.jpg'
     },
     {
       name: 'Riya',
