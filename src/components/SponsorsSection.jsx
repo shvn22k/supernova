@@ -24,6 +24,29 @@ const SponsorsSection = () => {
             </div>
           </div>
           
+          {/* Powered By Sponsors */}
+          <div className="sponsor-category">
+            <h3 className="sponsor-category-title">Powered By</h3>
+            <div className="sponsor-logos">
+              <motion.div 
+                className="logo-container glass-effect"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="placeholder-logo">Coming Soon</div>
+              </motion.div>
+              <motion.div 
+                className="logo-container glass-effect"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+              >
+                <div className="placeholder-logo">Coming Soon</div>
+              </motion.div>
+            </div>
+          </div>
+          
           {/* Silver Sponsors */}
           <div className="sponsor-category">
             <h3 className="sponsor-category-title">Silver Sponsors</h3>
