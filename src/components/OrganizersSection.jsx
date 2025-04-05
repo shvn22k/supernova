@@ -83,7 +83,7 @@ const OrganizersSection = () => {
     {
       name: 'Hardik',
       social: {
-        linkedin: '#'
+        linkedin: 'https://www.linkedin.com/in/hardik-varshney-83052127b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
       },
       image: '/hardik.jpg'
     },
@@ -99,7 +99,7 @@ const OrganizersSection = () => {
       social: {
         linkedin: '#'
       },
-      image: '/team-member-6.jpg'
+      image: '/nopfp.jpg'
     }
   ];
 
@@ -107,7 +107,7 @@ const OrganizersSection = () => {
     {
       name: 'Saraswati',
       social: {
-        linkedin: '#'
+        linkedin: 'https://www.linkedin.com/in/saraswati-a19a99146?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
       },
       image: '/saras.jpg'
     },
@@ -140,14 +140,14 @@ const OrganizersSection = () => {
       social: {
         linkedin: '#'
       },
-      image: '/team-member-11.jpg'
+      image: '/nopfp.jpg'
     },
     {
       name: 'Lavanya',
       social: {
         linkedin: '#'
       },
-      image: '/team-member-12.jpg'
+      image: '/nopfp.jpg'
     }
   ];
 
