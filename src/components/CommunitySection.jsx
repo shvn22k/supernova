@@ -4,51 +4,35 @@ import { FaUsers, FaHandshake, FaWhatsapp, FaSmile } from 'react-icons/fa';
 const CommunitySection = () => {
   const communityMembers = [
     {
-      name: 'Member Name 1',
-      role: 'Description',
-      contribution: 'Placeholder text for community contribution description.',
-      image: '/team-member-1.jpg'
+      name: 'GDG IIMT',
+      image: '/iimt.png'
     },
     {
-      name: 'Member Name 2',
-      role: 'Description',
-      contribution: 'Placeholder text for community contribution description.',
+      name: 'Coming soon',
       image: '/team-member-2.jpg'
     },
     {
-      name: 'Member Name 3',
-      role: 'Student Ambassador',
-      contribution: 'Placeholder text for community contribution description.',
+      name: 'Coming soom',
       image: '/team-member-3.jpg'
     },
     {
-      name: 'Member Name 4',
-      role: 'Industry Expert',
-      contribution: 'Placeholder text for community contribution description.',
+      name: 'Coming soon',
       image: '/team-member-4.jpg'
     },
     {
-      name: 'Member Name 5',
-      role: 'Volunteer Coordinator',
-      contribution: 'Placeholder text for community contribution description.',
+      name: 'Coming soon',
       image: '/team-member-5.jpg'
     },
     {
-      name: 'Member Name 6',
-      role: 'Previous Winner',
-      contribution: 'Placeholder text for community contribution description.',
+      name: 'Coming soon',
       image: '/team-member-6.jpg'
     },
     {
-      name: 'Member Name 7',
-      role: 'Design Lead',
-      contribution: 'Placeholder text for community contribution description.',
+      name: 'Coming soon',
       image: '/team-member-7.jpg'
     },
     {
-      name: 'Member Name 8',
-      role: 'Content Creator',
-      contribution: 'Placeholder text for community contribution description.',
+      name: 'Coming soon',
       image: '/team-member-8.jpg'
     }
   ];
@@ -94,8 +78,6 @@ const CommunitySection = () => {
               </div>
               <div className="member-details">
                 <h4 className="member-name">{member.name}</h4>
-                <div className="member-role">{member.role}</div>
-                <p className="member-contribution">{member.contribution}</p>
               </div>
             </motion.div>
           ))}
