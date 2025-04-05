@@ -66,16 +66,16 @@ const OrganizersSection = () => {
     {
       name: 'Kunal',
       social: {
-        linkedin: '#'
+        linkedin: 'https://www.linkedin.com/in/kunal-rohilla-793a7931b'
       },
-      image: '/team-member-2.jpg'
+      image: '/kunal.jpg'
     },
     {
       name: 'Palak',
       social: {
-        linkedin: '#'
+        linkedin: 'https://www.linkedin.com/in/palakbansal-05-/'
       },
-      image: '/team-member-3.jpg'
+      image: '/palak.png'
     }
   ];
 
@@ -114,9 +114,9 @@ const OrganizersSection = () => {
     {
       name: 'Riya',
       social: {
-        linkedin: '#'
+        linkedin: 'https://www.linkedin.com/in/riya-batra-059025297/'
       },
-      image: '/team-member-8.jpg'
+      image: '/riya.jpg'
     },
     {
       name: 'Ritika',
