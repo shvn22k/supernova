@@ -8,12 +8,12 @@ const CommunitySection = () => {
       image: '/iimt.png'
     },
     {
-      name: 'Coming soon',
-      image: '/team-member-2.jpg'
+      name: 'CodeChef - ABESEC Chapter',
+      image: '/abescodechef.png'
     },
     {
-      name: 'Coming soom',
-      image: '/team-member-3.jpg'
+      name: 'FOSSCU-K',
+      image: '/fosscu.png'
     },
     {
       name: 'Coming soon',
