@@ -3,10 +3,10 @@ import { FaUsers, FaHandshake, FaWhatsapp, FaSmile } from 'react-icons/fa';
 
 const CommunitySection = () => {
   const communityMembers = [
-    {
-      name: 'GDG IIMT',
-      image: '/iimt.png'
-    },
+    // {
+    //   name: 'GDG IIMT',
+    //   image: '/iimt.png'
+    // },
     {
       name: 'CodeChef - ABESEC Chapter',
       image: '/abescodechef.png'
