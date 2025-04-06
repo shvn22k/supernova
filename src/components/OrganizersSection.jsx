@@ -60,7 +60,7 @@ const OrganizersSection = () => {
     {
       name: 'Shiven Kumar Shandil',
       role: 'Technical Lead',
-      bio: 'yoo, i vibe coded this site (need internship for aiml roles :D hire me pls)',
+      bio: 'heyy, i vibe coded this site (need internship for aiml roles :D hire me pls)',
       social: {
         linkedin: 'https://www.linkedin.com/in/shiven-k-58b423212/'
       },
