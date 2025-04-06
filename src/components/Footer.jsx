@@ -27,7 +27,7 @@ const Footer = () => {
 
         <div className="footer-section">
           <h3 className="footer-title">Follow Us</h3>
-          <a href="https://www.instagram.com/abhyudaya_glbajaj/" target="_blank" rel="noopener noreferrer" className="footer-link">
+          <a href="https://www.instagram.com/supernova_hacks/" target="_blank" rel="noopener noreferrer" className="footer-link">
             <FaInstagram /> Instagram
           </a>
           <a href="https://www.linkedin.com/company/abhyudayaclub/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="footer-link">
