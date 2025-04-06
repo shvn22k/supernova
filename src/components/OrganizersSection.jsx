@@ -40,6 +40,15 @@ const OrganizersSection = () => {
       image: '/moksha.jpg'
     },
     {
+      name: 'Harshil',
+      role: 'Co-Organizer',
+      bio: 'With my skill in establishing robust corporate relationships and closing impactful deals, I guarantee our hackathon has the backing of the best.',
+      social: {
+        linkedin: ''
+      },
+      image: '/harshil.jpg'
+    },
+    {
       name: 'Pranshu Kamboj',
       role: 'Operational Lead',
       bio: 'Ensures seamless execution, from logistics to coordination, creating an environment where innovation thrives. Passionate about tech, management, and bringing ideas to life!',
