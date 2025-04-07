@@ -44,7 +44,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const hackathonDate = new Date('2025-04-25T00:00:00');
+      const hackathonDate = new Date('2025-05-02T00:00:00');
       const now = new Date();
       const difference = hackathonDate - now;
 
@@ -138,7 +138,7 @@ const HeroSection = () => {
               </div>
               <div className="event-info-content">
                 <div className="event-info-label">Date:</div>
-                <div className="event-info-value">April 25, 2025</div>
+                <div className="event-info-value">May 2, 2025</div>
               </div>
             </div>
 
@@ -148,7 +148,7 @@ const HeroSection = () => {
               </div>
               <div className="event-info-content">
                 <div className="event-info-label">Duration:</div>
-                <div className="event-info-value">8 hours</div>
+                <div className="event-info-value">8 hours(can be extended to 24hrs)</div>
               </div>
             </div>
 
