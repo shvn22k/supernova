@@ -89,7 +89,10 @@ const HeroSection = () => {
               {!isTypingComplete && <span className="cursor-blink"></span>}
             </div>
             
-            <DevfolioButton hackathonSlug="supernova-hacks" theme="light" />
+            {/* Devfolio button with proper positioning */}
+            <div style={{ marginTop: '2rem', position: 'relative', zIndex: 20 }}>
+              <DevfolioButton />
+            </div>
           </motion.div>
         </div>
       </section>

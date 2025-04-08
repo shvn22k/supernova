@@ -1,88 +1,60 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
 
-const DevfolioButton = ({ hackathonSlug = "supernova-hacks", theme = "light" }) => {
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-  const [buttonVisible, setButtonVisible] = useState(false);
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apply.devfolio.co/v2/sdk.js';
-    script.async = true;
-    script.defer = true;
-    
-    script.onload = () => {
-      console.log('Devfolio script loaded');
-      setScriptLoaded(true);
-      
-      // Check if button becomes visible after script loads
-      setTimeout(() => {
-        const buttonElement = document.querySelector('.apply-button');
-        if (buttonElement && buttonElement.children.length > 0) {
-          setButtonVisible(true);
-        } else {
-          console.log('Devfolio button not visible after script load');
-          setButtonVisible(false);
-        }
-      }, 1000);
-    };
-    
-    document.body.appendChild(script);
-    
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
-
-  // Style for the fallback button
-  const fallbackButtonStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#3770FF',
-    color: 'white',
-    fontWeight: 600,
-    height: '44px',
-    width: '312px',
-    borderRadius: '4px',
-    fontSize: '16px',
-    margin: '2rem auto 0',
-    cursor: 'pointer',
-    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
-    border: 'none',
-    transition: 'all 0.2s ease'
-  };
-
-  // Render official button placeholder with a fallback visible button
+const DevfolioButton = () => {
+  // Direct iframe implementation that loads immediately
   return (
-    <>
-      <div 
-        className="apply-button" 
-        data-hackathon-slug={hackathonSlug}
-        data-button-theme={theme}
-        style={{ 
-          height: 44, 
-          width: 312, 
-          margin: '2rem auto 0',
-          display: buttonVisible ? 'block' : 'none' 
+    <div style={{ 
+      margin: '2rem auto 0', 
+      display: 'flex', 
+      justifyContent: 'center', 
+      position: 'relative', 
+      zIndex: 10 
+    }}>
+      {/* Official Devfolio button iframe */}
+      <iframe 
+        src="https://apply.devfolio.co/v2/button?hackathonSlug=supernova-hacks&buttonTheme=light" 
+        title="Apply with Devfolio" 
+        sandbox="allow-scripts allow-same-origin allow-top-navigation allow-top-navigation-by-user-activation" 
+        style={{
+          padding: '0px', 
+          border: '0px', 
+          margin: '0px', 
+          height: '44px', 
+          width: '320px'
         }}
-      ></div>
+      ></iframe>
       
-      {(!scriptLoaded || !buttonVisible) && (
-        <a 
-          href={`https://${hackathonSlug}.devfolio.co/`} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          style={{ textDecoration: 'none' }}
-        >
-          <button style={fallbackButtonStyle}>
-            <span style={{ marginRight: '8px' }}>▶</span>
-            Apply with Devfolio
-          </button>
-        </a>
-      )}
-    </>
+      {/* Placeholder button - commented out as requested
+      <a 
+        href="https://supernova-hacks.devfolio.co/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        style={{ 
+          display: 'none',
+          textDecoration: 'none' 
+        }}
+      >
+        <button style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#3770FF',
+          color: 'white',
+          fontWeight: 600,
+          height: '44px',
+          width: '312px',
+          borderRadius: '4px',
+          fontSize: '16px',
+          cursor: 'pointer',
+          boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
+          border: 'none'
+        }}>
+          <span style={{ marginRight: '8px' }}>▶</span>
+          Apply with Devfolio
+        </button>
+      </a>
+      */}
+    </div>
   );
 };
 

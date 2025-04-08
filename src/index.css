@@ -3002,3 +3002,15 @@ body {
   background: rgba(255, 255, 255, 0.1);
   padding: 12px;
 }
+
+/* Override any potential conflicts with the Devfolio button */
+.apply-button {
+  display: none !important;
+}
+
+/* Remove any existing styles that might conflict */
+.devfolio-button, 
+.devfolio-button-contents, 
+.devfolio-logo {
+  display: none !important;
+}
