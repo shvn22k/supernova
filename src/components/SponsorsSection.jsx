@@ -84,6 +84,21 @@ const SponsorsSection = () => {
               </motion.div>
             </div>
           </div>
+          
+          {/* Event Partners */}
+          <div className="sponsor-category">
+            <h3 className="sponsor-category-title">Event Partners</h3>
+            <div className="sponsor-logos">
+              <motion.div 
+                className="logo-container glass-effect"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img src="/genesis.png" alt="GENESIS LOGO" className="sponsor-logo" />
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
