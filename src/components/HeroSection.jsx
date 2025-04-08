@@ -91,7 +91,7 @@ const HeroSection = () => {
             
             {/* Devfolio button with proper positioning */}
             <div style={{ marginTop: '2rem', position: 'relative', zIndex: 20 }}>
-              <DevfolioButton />
+              <DevfolioButton hackathonSlug="supernova-hacks" theme="light" />
             </div>
           </motion.div>
         </div>
