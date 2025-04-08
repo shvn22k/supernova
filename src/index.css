@@ -2966,15 +2966,12 @@ body {
   padding: 12px;
 }
 
-/* Override any potential conflicts with the Devfolio button */
+/* Let Devfolio SDK handle styling */
 .apply-button {
-  display: block !important;
-  margin: 0 auto;
-  z-index: 10;
-  position: relative;
+  /* No styles */
 }
 
-/* Hide our custom Devfolio button styling as we're using the official one */
+/* Hide any custom button styling */
 .devfolio-button, 
 .devfolio-button-contents, 
 .devfolio-logo {

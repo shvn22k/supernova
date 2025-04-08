@@ -1,32 +1,25 @@
 import React, { useEffect } from 'react';
 
-const DevfolioButton = ({ hackathonSlug, theme = "light" }) => {
-  // NOTE: The SDK script is already loaded in index.html
-  // This useEffect is a fallback in case it wasn't loaded
+const DevfolioButton = () => {
   useEffect(() => {
-    // Check if the script is already loaded
-    if (!document.querySelector('script[src="https://apply.devfolio.co/v2/sdk.js"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://apply.devfolio.co/v2/sdk.js';
-      script.async = true;
-      script.defer = true;
-      document.body.appendChild(script);
-      
-      return () => {
-        document.body.removeChild(script);
-      };
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
     }
   }, []);
 
-  // Return the button element exactly as specified in the documentation
   return (
     <div 
       className="apply-button" 
-      data-hackathon-slug={hackathonSlug} 
-      data-button-theme={theme}
+      data-hackathon-slug="supernova-hacks" 
+      data-button-theme="light"
       style={{ height: '44px', width: '312px' }}
-    />
+    ></div>
   );
 };
 
-export default DevfolioButton; 
+export default DevfolioButton;

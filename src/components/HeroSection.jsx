@@ -90,8 +90,17 @@ const HeroSection = () => {
             </div>
             
             {/* Devfolio button with proper positioning */}
-            <div style={{ marginTop: '2rem', position: 'relative', zIndex: 20 }}>
-              <DevfolioButton hackathonSlug="supernova-hacks" theme="light" />
+            <div style={{ 
+              marginTop: '2rem',
+              position: 'relative',
+              zIndex: 20,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100%',
+              minHeight: '44px'
+            }}>
+              <DevfolioButton />
             </div>
           </motion.div>
         </div>
