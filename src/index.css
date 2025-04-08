@@ -2968,37 +2968,13 @@ body {
 
 /* Override any potential conflicts with the Devfolio button */
 .apply-button {
-  display: none !important;
-}
-
-/* Remove any existing styles that might conflict */
-.devfolio-button, 
-.devfolio-button-contents, 
-.devfolio-logo {
-  display: none !important;
-}
-
-/* Make sure the official Devfolio button is visible */
-.apply-button {
   display: block !important;
-}
-
-/* Remove the custom button styling */
-.devfolio-button, 
-.devfolio-button-contents, 
-.devfolio-logo {
-  display: none !important;
-}
-
-/* Ensure the official Devfolio button is visible */
-.apply-button {
-  display: block !important;
-  margin: 2rem auto 0;
-  position: relative;
+  margin: 0 auto;
   z-index: 10;
+  position: relative;
 }
 
-/* Hide our custom implementation */
+/* Hide our custom Devfolio button styling as we're using the official one */
 .devfolio-button, 
 .devfolio-button-contents, 
 .devfolio-logo {
