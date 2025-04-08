@@ -160,7 +160,7 @@ const HeroSection = () => {
               </div>
               <div className="event-info-content">
                 <div className="event-info-label">Duration:</div>
-                <div className="event-info-value">24 hours</div>
+                <div className="event-info-value">2 days (May 2-3, 2025)</div>
               </div>
             </div>
 
@@ -170,7 +170,7 @@ const HeroSection = () => {
               </div>
               <div className="event-info-content">
                 <div className="event-info-label">Mode:</div>
-                <div className="event-info-value">Offline (Round 1 Online, Round 2 Offline)</div>
+                <div className="event-info-value">On-campus (8AM-6PM daily)</div>
               </div>
             </div>
 

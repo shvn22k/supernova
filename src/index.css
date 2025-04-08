@@ -2977,3 +2977,82 @@ body {
 .devfolio-logo {
   display: none !important;
 }
+
+/* Timeline day titles and notes */
+.day-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  margin: 3rem 0 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.day-note {
+  max-width: 800px;
+  margin: 2rem auto 3rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  background: rgba(30, 30, 50, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.day-note h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.day-note ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.day-note li {
+  color: #d1d5db;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .day-title {
+    font-size: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    margin: 2.5rem 0 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .day-note {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .day-note h4 {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .day-title {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .day-note {
+    padding: 1rem;
+  }
+  
+  .day-note h4 {
+    font-size: 1rem;
+  }
+  
+  .day-note li {
+    font-size: 0.9rem;
+  }
+}
