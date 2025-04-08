@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaSmile } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const OrganizersSection = () => {
   const organizers = [
@@ -40,11 +41,11 @@ const OrganizersSection = () => {
       image: '/moksha.jpg'
     },
     {
-      name: 'Harshil',
+      name: ' Harshil Srivastav',
       role: 'Co-Organizer',
       bio: 'With my skill in establishing robust corporate relationships and closing impactful deals, I guarantee our hackathon has the backing of the best.',
       social: {
-        linkedin: ''
+        x: 'https://x.com/ifwcode'
       },
       image: '/harshil.jpg'
     },
@@ -125,9 +126,15 @@ const OrganizersSection = () => {
                 <p className="organizer-bio">{organizer.bio}</p>
                 
                 <div className="organizer-social">
-                  <a href={organizer.social.linkedin} className="social-link">
-                    <FaLinkedin />
-                  </a>
+                  {organizer.social.linkedin ? (
+                    <a href={organizer.social.linkedin} className="social-link">
+                      <FaLinkedin />
+                    </a>
+                  ) : organizer.social.x ? (
+                    <a href={organizer.social.x} className="social-link">
+                      <FaXTwitter />
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </motion.div>
