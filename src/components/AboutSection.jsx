@@ -84,7 +84,7 @@ const AboutSection = () => {
               <FaCode className="highlight-icon" />
               <div className="highlight-text">
                 <h3>Hands-on Development</h3>
-                <p>8 hours of focused coding and problem-solving</p>
+                <p>24 hours of focused coding and problem-solving</p>
               </div>
             </motion.div>
           </div>

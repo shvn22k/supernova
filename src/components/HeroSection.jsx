@@ -148,7 +148,7 @@ const HeroSection = () => {
               </div>
               <div className="event-info-content">
                 <div className="event-info-label">Duration:</div>
-                <div className="event-info-value">8 hours(can be extended to 24hrs)</div>
+                <div className="event-info-value">24 hours</div>
               </div>
             </div>
 
