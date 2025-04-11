@@ -16,7 +16,7 @@ const OrganizersSection = () => {
     {
       name: 'Abhyudaya Core',
       role: 'Organizing Body',
-      bio: '(koi achhi si cool si tagline suggest krdo pls)',
+      bio: 'The Best Of All',
       social: {
         linkedin: 'https://www.linkedin.com/company/abhyudayaclub/posts/?feedView=all'
       },
@@ -45,7 +45,7 @@ const OrganizersSection = () => {
       role: 'Co-Organizer',
       bio: 'With my skill in establishing robust corporate relationships and closing impactful deals, I guarantee our hackathon has the backing of the best.',
       social: {
-        x: 'https://x.com/ifwcode'
+        linkedin: 'https://www.linkedin.com/in/harshil-srivastav/'
       },
       image: '/harshil.jpg'
     },

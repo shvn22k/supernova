@@ -16,12 +16,12 @@ const CommunitySection = () => {
       image: '/fosscu.png'
     },
     {
-      name: 'Coming soon',
-      image: '/team-member-4.jpg'
+      name: 'ProNetix',
+      image: '/pronetix.jpg'
     },
     {
-      name: 'Coming soon',
-      image: '/team-member-5.jpg'
+      name: 'GDG ABESEC',
+      image: '/gdgabes.png'
     },
     {
       name: 'Coming soon',
