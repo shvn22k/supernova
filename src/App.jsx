@@ -11,6 +11,7 @@ import FAQsSection from './components/FAQsSection';
 import OrganizersSection from './components/OrganizersSection';
 import CommunitySection from './components/CommunitySection';
 import Footer from './components/Footer';
+import FixedRegisterButton from './components/FixedRegisterButton';
 
 function App() {
   const [windowSize, setWindowSize] = useState({
@@ -116,6 +117,7 @@ function App() {
 
       {/* Footer */}
       <Footer />
+      <FixedRegisterButton />
     </div>
   );
 }
