@@ -170,7 +170,7 @@ const HeroSection = () => {
               </div>
               <div className="event-info-content">
                 <div className="event-info-label">Mode:</div>
-                <div className="event-info-value">On-campus (8AM-6PM daily)</div>
+                <div className="event-info-value">On-campus (offline/in-person)</div>
               </div>
             </div>
 
