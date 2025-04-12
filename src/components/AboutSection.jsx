@@ -20,7 +20,7 @@ const AboutSection = () => {
           <h3 className="mission-title">Our Mission</h3>
           <p className="mission-text">
             Our goal is to foster an environment where new ideas can take flight, pushing the boundaries 
-            of what's possible in just 8 hours of focused innovation.
+            of what's possible in just 24 hours of focused innovation.
           </p>
         </motion.div>
 
@@ -33,11 +33,11 @@ const AboutSection = () => {
             className="about-text-container glass-effect"
           >
             <p className="about-text">
-              Join us for SuperNova, an engaging 8-hour in-person hackathon where creativity and 
+              Join us for SuperNova, an engaging 24-hour in-person hackathon where creativity and 
               technical skills come together.
             </p>
             <p className="about-text">
-              Put your skills to the test and create something meaningful in just 8 hours. Our judges will 
+              Put your skills to the test and create something meaningful in just 24 hours. Our judges will 
               evaluate projects based on originality, technical execution, and practical applications.            
               Whether you're an experienced developer or just starting your coding journey, SuperNova 
               offers a great opportunity to bring your ideas to life.
