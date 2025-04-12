@@ -72,7 +72,7 @@ const SponsorsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="placeholder-logo">Coming Soon</div>
+                <img src="/xyz-logo-white.png" alt="XYZ LOGO" className="sponsor-logo" />
               </motion.div>
               <motion.div 
                 className="logo-container glass-effect"
