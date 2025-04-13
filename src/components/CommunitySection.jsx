@@ -24,8 +24,8 @@ const CommunitySection = () => {
       image: '/gdgabes.png'
     },
     {
-      name: 'Coming soon',
-      image: '/team-member-6.jpg'
+      name: 'GFG Student Chapter: GLBITM',
+      image: '/gfgglb.jpg'
     },
     {
       name: 'Coming soon',
