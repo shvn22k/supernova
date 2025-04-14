@@ -87,7 +87,7 @@ const SponsorsSection = () => {
           
           {/* Event Partners */}
           <div className="sponsor-category">
-            <h3 className="sponsor-category-title">Event Partners</h3>
+            <h3 className="sponsor-category-title">Event Partner</h3>
             <div className="sponsor-logos">
               <motion.div 
                 className="logo-container glass-effect"
