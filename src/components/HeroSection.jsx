@@ -89,7 +89,6 @@ const HeroSection = () => {
               {!isTypingComplete && <span className="cursor-blink"></span>}
             </div>
             
-            {/* Devfolio button with proper positioning */}
             <div style={{ 
               marginTop: '2rem',
               position: 'relative',
@@ -189,8 +188,8 @@ const HeroSection = () => {
                 <FaUsers className="event-info-icon" />
               </div>
               <div className="event-info-content">
-                <div className="event-info-label">Expected Participation:</div>
-                <div className="event-info-value">TBA</div>
+                <div className="event-info-label">Prize Pool:</div>
+                <div className="event-info-value">Rs.35,000+</div>
               </div>
             </div>
 
