@@ -77,13 +77,13 @@ const OrganizersSection = () => {
       image: '/shiven.png'
     },
     {
-      name: 'Aditi Singh',
+      name: 'Riya Batra',
       role: 'Social Media Lead',
       bio: 'Breathes reels, speaks in hashtags. Can turn a random moment into peak content and make chaos look curated.',
       social: {
-        linkedin: 'https://www.linkedin.com/in/aditi-singh-13686b24a/'
+        linkedin: 'https://www.linkedin.com/in/riya-batra-059025297/'
       },
-      image: '/aditi.jpeg'
+      image: '/riya.jpg'
     }
   ];
 
