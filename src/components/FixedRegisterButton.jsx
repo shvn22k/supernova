@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 const FixedRegisterButton = () => {
   return (
     <motion.a
-      href="https://supernova-hacks.devfolio.co/"
+      // href="https://supernova-hacks.devfolio.co/"
+      href = "#"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed-register-button"
