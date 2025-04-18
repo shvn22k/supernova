@@ -28,12 +28,16 @@ const CommunitySection = () => {
       image: '/gfgglb.jpg'
     },
     {
-      name: 'Coming soon',
-      image: '/team-member-7.jpg'
+      name: 'WebForge',
+      image: '/webforge.png'
     },
     {
-      name: 'Coming soon',
-      image: '/team-member-8.jpg'
+      name: 'Tech Holics',
+      image: '/tech-holics.jpg'
+    },
+    {
+      name: 'GDG IILM',
+      image: '/gdgiilm.png'
     }
   ];
 
