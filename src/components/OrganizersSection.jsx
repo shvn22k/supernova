@@ -14,15 +14,6 @@ const OrganizersSection = () => {
       image: '/maam.jpeg'
     },
     {
-      name: 'Abhyudaya Core',
-      role: 'Organizing Body',
-      bio: 'The Best Of All',
-      social: {
-        linkedin: 'https://www.linkedin.com/company/abhyudayaclub/posts/?feedView=all'
-      },
-      image: '/abhyudaya.webp'
-    },
-    {
       name: 'Kashish Verma',
       role: 'President',
       bio: 'CEO of "lets just do it and see what happens." If it works, it was the plan all along.',
@@ -84,7 +75,34 @@ const OrganizersSection = () => {
         linkedin: 'https://www.linkedin.com/in/riya-batra-059025297/'
       },
       image: '/riya.jpg'
-    }
+    },
+    {
+      name: 'Tarun Kaushik',
+      role: 'Creative Production Lead',
+      bio: 'turning random ideas into cool stuff always behind the camera and always chasing that “yo, this looks sick” moment.',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/tarunkaushik1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+      },
+      image: 'tarun.jpg' 
+    },
+    {
+      name: 'Saraswati',
+      role: 'DAM Lead',
+      bio: 'crafting compelling narratives through innovative visuals and engaging content',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/saraswati-a19a99146?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+      },
+      image: 'saras.jpg' 
+    },
+    // {
+    //   name: 'New Organizer 3',
+    //   role: 'Team Member',
+    //   bio: 'Brief description about the new team member and their contributions to the hackathon.',
+    //   social: {
+    //     linkedin: '#'
+    //   },
+    //   image: '' // Add image path when available
+    // }
   ];
 
   return (
@@ -92,19 +110,34 @@ const OrganizersSection = () => {
       <div className="section-container">
         <h2 className="section-title">Meet the Organizers</h2>
         
-        <p className="organizers-description">
-          SuperNova Hackathon is organized by a dedicated team of professionals passionate about technology,
-          education, and creating opportunities for innovation. Get to know the people behind the event!
-        </p>
+        <div className="organizers-header-container">
+          <a 
+            href="https://www.linkedin.com/company/abhyudayaclub/posts/?feedView=all" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="organizers-logo-link"
+          >
+            <img 
+              src="/abhyudaya.webp"
+              alt="Abhyudaya Core" 
+              className="abhyudaya-logo" 
+            />
+          </a>
+          
+          <p className="organizers-description">
+            SuperNova Hackathon is organized by a dedicated team of professionals passionate about technology,
+            education, and creating opportunities for innovation. Get to know the people behind the event!
+          </p>
+        </div>
         
-        <div className="organizers-grid">
+        <div className="organizers-grid-compact">
           {organizers.map((organizer, index) => (
             <motion.div
               key={organizer.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="organizer-card glass-effect"
+              transition={{ duration: 0.5, delay: Math.min(index * 0.05, 0.5) }}
+              className="organizer-card-compact glass-effect"
             >
               <div className="organizer-image-container">
                 {organizer.image ? (
@@ -115,7 +148,7 @@ const OrganizersSection = () => {
                   />
                 ) : (
                   <div className="smiley-placeholder">
-                    <FaSmile size={50} color="#FFD700" />
+                    <FaSmile size={40} color="#FFD700" />
                   </div>
                 )}
               </div>

@@ -16,22 +16,22 @@ const PrizesSection = () => {
     {
       place: '1st Place',
       icon: <FaTrophy />,
-      prize: '₹!!!!!',
-      description: 'We will keep you guessing that for now :)',
+      prize: '₹20,000+',
+      description: 'Cash Prize + Certificate + Swags',
       color: '#FFD700'
     },
     {
       place: '2nd Place',
       icon: <FaMedal />,
-      prize: '₹!!!!!',
-      description: 'We will keep you guessing that for now :)',
+      prize: '₹12,000+',
+      description: 'Cash Prize + Certificate + Swags',
       color: '#C0C0C0'
     },
     {
       place: '3rd Place',
       icon: <FaAward />,
-      prize: '₹!!!!!',
-      description: 'We will keep you guessing that for now :)',
+      prize: '₹8,000+',
+      description: 'Cash Prize + Certificate + Swags',
       color: '#CD7F32'
     }
   ];

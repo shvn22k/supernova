@@ -19,10 +19,10 @@ const CommunitySection = () => {
       name: 'ProNetix',
       image: '/pronetix.jpg'
     },
-    {
-      name: 'GDG ABESEC',
-      image: '/gdgabes.png'
-    },
+    // {
+    //   name: 'GDG ABESEC',
+    //   image: '/gdgabes.png'
+    // },
     {
       name: 'GFG Student Chapter: GLBITM',
       image: '/gfgglb.jpg'
@@ -38,6 +38,10 @@ const CommunitySection = () => {
     {
       name: 'GDG IILM',
       image: '/gdgiilm.png'
+    },
+    {
+      name: 'GDG GNIOT',
+      image: ''
     }
   ];
 
