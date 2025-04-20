@@ -7,7 +7,7 @@ const OrganizersSection = () => {
     {
       name: 'Attiuttama Mishra',
       role: 'Faculty Coordinator',
-      bio: 'The calm in our chaos, the strength behind the scenes. With unmatched wisdom and steady support, she turns challenges into clarity — and keeps us moving forward.',
+      bio: 'The calm in our chaos, the strength behind the scenes. With unmatched wisdom and steady support, she turns challenges into clarity.',
       social: {
         linkedin: 'https://www.linkedin.com/in/attiuttama-mishra-10a61a1a9/'
       },

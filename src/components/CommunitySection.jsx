@@ -41,7 +41,11 @@ const CommunitySection = () => {
     },
     {
       name: 'GDG GNIOT',
-      image: ''
+      image: '/gdggniot.png'
+    },
+    {
+      name: 'GDG IMSEC',
+      image: '/gdgimsec.png'
     }
   ];
 

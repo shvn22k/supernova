@@ -20,7 +20,7 @@ const FAQsSection = () => {
     },
     {
       question: "How do I register?",
-      answer: "Applications will are on Devfolio. You'll need to create a team of 2-4 members and submit a preliminary proposal. Selected teams will be invited to participate in the in-person event."
+      answer: "Applications will are on Devfolio and Unstop. You'll need to create a team of 2-4 members and submit a preliminary proposal. Selected teams will be invited to participate in the in-person event."
     },
     {
       question: "Do I need to know coding to participate?",
