@@ -59,24 +59,6 @@ const OrganizersSection = () => {
       image: '/satyam.jpg'
     },
     {
-      name: 'Shiven Kumar Shandil',
-      role: 'Technical Lead',
-      bio: 'heyy, i vibe coded this site (need internship for aiml roles :D hire me pls)',
-      social: {
-        linkedin: 'https://www.linkedin.com/in/shiven-k-58b423212/'
-      },
-      image: '/shiven.png'
-    },
-    {
-      name: 'Riya Batra',
-      role: 'Social Media Lead',
-      bio: 'Breathes reels, speaks in hashtags. Can turn a random moment into peak content and make chaos look curated.',
-      social: {
-        linkedin: 'https://www.linkedin.com/in/riya-batra-059025297/'
-      },
-      image: '/riya.jpg'
-    },
-    {
       name: 'Tarun Kaushik',
       role: 'Creative Production Lead',
       bio: 'turning random ideas into cool stuff always behind the camera and always chasing that “yo, this looks sick” moment.',
@@ -94,15 +76,42 @@ const OrganizersSection = () => {
       },
       image: 'saras.jpg' 
     },
-    // {
-    //   name: 'New Organizer 3',
-    //   role: 'Team Member',
-    //   bio: 'Brief description about the new team member and their contributions to the hackathon.',
-    //   social: {
-    //     linkedin: '#'
-    //   },
-    //   image: '' // Add image path when available
-    // }
+    {
+      name: 'Shiven Kumar Shandil',
+      role: 'Technical Lead',
+      bio: 'heyy, i vibe coded this site (need internship for aiml roles :D hire me pls)',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/shiven-k-58b423212/'
+      },
+      image: '/shiven.png'
+    },
+    {
+      name: 'Kunal Rohilla',
+      role: 'General Manager',
+      bio: 'The behind-the-scenes wizard who makes the impossible happen. Crisis solver, timeline bender, and professional pizza orderer',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/kunal-rohilla-793a7931b/'
+      },
+      image: '/kunal.jpg' // Add image path when available
+    },
+    {
+      name: 'Hardik Varshney',
+      role: 'PR Lead',
+      bio: 'The hype architect. Turns caffeine into headlines and makes technical jargon actually sound cool.',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/hardik-varshney-83052127b/'
+      },
+      image: '/hardik.jpg' // Add image path when available
+    },
+    {
+      name: 'Riya Batra',
+      role: 'Social Media Lead',
+      bio: 'Breathes reels, speaks in hashtags. Can turn a random moment into peak content and make chaos look curated.',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/riya-batra-059025297/'
+      },
+      image: '/riya.jpg'
+    },
   ];
 
   return (
