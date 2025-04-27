@@ -149,7 +149,7 @@ const HeroSection = () => {
               </div>
               <div className="event-info-content">
                 <div className="event-info-label">Date:</div>
-                <div className="event-info-value">May 2, 2025</div>
+                <div className="event-info-value">May 1, 2025</div>
               </div>
             </div>
 
@@ -159,7 +159,7 @@ const HeroSection = () => {
               </div>
               <div className="event-info-content">
                 <div className="event-info-label">Duration:</div>
-                <div className="event-info-value">2 days (May 2-3, 2025)</div>
+                <div className="event-info-value">2 days (May 1-2, 2025)</div>
               </div>
             </div>
 

@@ -34,15 +34,7 @@ const SponsorsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="placeholder-logo">Coming Soon</div>
-              </motion.div>
-              <motion.div 
-                className="logo-container glass-effect"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-              >
-                <div className="placeholder-logo">Coming Soon</div>
+                <img src="/akindo_logo_white.png" alt="AKINDO LOGO" className="sponsor-logo" />
               </motion.div>
             </div>
           </div>
