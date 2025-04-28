@@ -104,10 +104,10 @@ const TimelineSection = () => {
       <div className="section-container">
         <h2 className="section-title">Event Timeline</h2>
         <p className="timeline-description">
-          SuperNova is a two-day hackathon on May 1-2, 2025. Here's the detailed schedule:
+          SuperNova is a two-day hackathon on May 2-3, 2025. Here's the detailed schedule:
         </p>
         
-        <h3 className="day-title">Day 1: Friday, May 1st - Kickoff and Project Development</h3>
+        <h3 className="day-title">Day 1: Friday, May 2nd - Kickoff and Project Development</h3>
         
         <div className="roadmap-container">
           {day1Events.map((event, index) => (
@@ -164,7 +164,7 @@ const TimelineSection = () => {
           </ul>
         </div>
         
-        <h3 className="day-title">Day 2: Saturday, May 2nd - Final Development and Presentations</h3>
+        <h3 className="day-title">Day 2: Saturday, May 3rd - Final Development and Presentations</h3>
         
         <div className="roadmap-container">
           {day2Events.map((event, index) => (
